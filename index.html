@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Техника без страха — гайд для женщин</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Georgia, serif; background: #FDF6EE; color: #3A2E28; }
+.hero {
+  background: linear-gradient(135deg, #F9C6D0 0%, #D8D0F0 50%, #C8EBE0 100%);
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.6);
+  color: #7A3045;
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: 5px 18px;
+  border-radius: 20px;
+  margin-bottom: 1.25rem;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+.hero h1 { font-size: 32px; font-weight: normal; margin-bottom: .6rem; color: #2A1E18; }
+.hero p { font-size: 16px; color: #5A3A30; font-family: sans-serif; max-width: 520px; margin: 0 auto 2rem; line-height: 1.65; }
+.stats {
+  display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;
+  font-family: sans-serif;
+}
+.stat { text-align: center; }
+.stat-num { font-size: 28px; font-weight: 700; color: #7A3045; }
+.stat-lbl { font-size: 12px; color: #7A5A50; letter-spacing: .05em; text-transform: uppercase; }
+
+.blocks {
+  max-width: 760px;
+  margin: 3rem auto;
+  padding: 0 1.5rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+}
+.block-card {
+  border-radius: 18px;
+  padding: 1.5rem;
+  text-decoration: none;
+  display: block;
+  transition: transform .15s, box-shadow .15s;
+}
+.block-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.10); }
+.block-num {
+  font-family: sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+  display: block;
+}
+.block-card h2 { font-size: 18px; font-weight: normal; margin-bottom: .4rem; }
+.block-card p { font-size: 13px; font-family: sans-serif; line-height: 1.55; opacity: .85; }
+.lessons { font-family: sans-serif; font-size: 11px; margin-top: .75rem; opacity: .7; }
+
+.b1 { background: #FEF0F3; color: #7A3045; }
+.b2 { background: #F7EEFE; color: #5C2070; }
+.b3 { background: #EDF7F3; color: #1F6B50; }
+.b4 { background: #EEF5FD; color: #1A4A7A; }
+.b5 { background: #FEF5EE; color: #7A3D10; }
+.b6 { background: #FFF0F3; color: #7A3045; }
+.b7 { background: #F0EDFC; color: #4A3870; }
+.b8 { background: #EDF7F3; color: #1F6B50; }
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-family: sans-serif;
+  font-size: 13px;
+  color: #9A8A80;
+  border-top: 1px solid #F0E0D8;
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-badge">Онлайн-курс</div>
+  <h1>Техника без страха</h1>
+  <p>Подробные инструкции по смартфону, компьютеру, интернету и соцсетям — для тех, кто хочет разобраться раз и навсегда.</p>
+  <div class="stats">
+    <div class="stat"><div class="stat-num">8</div><div class="stat-lbl">блоков</div></div>
+    <div class="stat"><div class="stat-num">38</div><div class="stat-lbl">уроков</div></div>
+    <div class="stat"><div class="stat-num">0</div><div class="stat-lbl">технического жаргона</div></div>
+  </div>
+</div>
+
+<div class="blocks">
+  <a class="block-card b1" href="blok1.html">
+    <span class="block-num">Блок 1</span>
+    <h2>Основы смартфона</h2>
+    <p>Зарядка, батарея, перегрев, зависания и правильная перезагрузка.</p>
+    <div class="lessons">Уроки 1–5</div>
+  </a>
+  <a class="block-card b2" href="blok2.html">
+    <span class="block-num">Блок 2</span>
+    <h2>Хранение и память</h2>
+    <p>Как освободить место, облако, перенос фото, дубликаты и кэш.</p>
+    <div class="lessons">Уроки 6–10</div>
+  </a>
+  <a class="block-card b3" href="blok3.html">
+    <span class="block-num">Блок 3</span>
+    <h2>Приложения</h2>
+    <p>Установка, обновление, удаление, сбои и контроль трафика.</p>
+    <div class="lessons">Уроки 11–15</div>
+  </a>
+  <a class="block-card b4" href="blok4.html">
+    <span class="block-num">Блок 4</span>
+    <h2>Интернет и Wi-Fi</h2>
+    <p>Подключение, пароли, сбои, публичные сети и расход трафика.</p>
+    <div class="lessons">Уроки 16–20</div>
+  </a>
+  <a class="block-card b5" href="blok5.html">
+    <span class="block-num">Блок 5</span>
+    <h2>Пароли и безопасность</h2>
+    <p>Надёжные пароли, 2FA, мошенники и взломанные аккаунты.</p>
+    <div class="lessons">Уроки 21–25</div>
+  </a>
+  <a class="block-card b6" href="blok6.html">
+    <span class="block-num">Блок 6</span>
+    <h2>Аккаунты и соцсети</h2>
+    <p>Почта, восстановление паролей, уведомления, приватность.</p>
+    <div class="lessons">Уроки 26–30</div>
+  </a>
+  <a class="block-card b7" href="blok7.html">
+    <span class="block-num">Блок 7</span>
+    <h2>Компьютер и ноутбук</h2>
+    <p>Выключение, скриншоты, передача файлов, флешки, обновления.</p>
+    <div class="lessons">Уроки 31–35</div>
+  </a>
+  <a class="block-card b8" href="blok8.html">
+    <span class="block-num">Блок 8</span>
+    <h2>Видеозвонки</h2>
+    <p>Zoom и Google Meet, звук, камера и демонстрация экрана.</p>
+    <div class="lessons">Уроки 36–38</div>
+  </a>
+</div>
+
+<footer>Техника без страха · Гайд для женщин · Все права защищены</footer>
+
+</body>
+</html>
