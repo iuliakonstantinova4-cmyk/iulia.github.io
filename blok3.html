@@ -6,40 +6,260 @@
 <title>Блок 3 — Приложения</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:Georgia,serif;background:#FDF6EE;color:#3A2E28;line-height:1.7;}
+body{font-family:Georgia,serif;background:#F4FBF8;color:#1A2E28;line-height:1.7;}
 .wrap{padding:2rem 1.5rem 4rem;max-width:720px;margin:0 auto;}
 .nav{margin-bottom:2rem;}
-.nav a{font-family:sans-serif;font-size:13px;color:#1F6B50;text-decoration:none;background:rgba(0,0,0,0.06);padding:6px 16px;border-radius:20px;}
-.hero{border-radius:20px;padding:2.5rem 2rem;text-align:center;margin-bottom:2.5rem;background:#C8EBE0;}
+.nav a{font-family:sans-serif;font-size:13px;color:#1F6B50;text-decoration:none;background:#C8EBE0;padding:6px 16px;border-radius:20px;}
+.hero{border-radius:20px;padding:2.5rem 2rem;text-align:center;margin-bottom:2.5rem;background:linear-gradient(135deg,#C8EBE0,#D8D0F0);}
 .hero-badge{display:inline-block;background:rgba(255,255,255,0.55);color:#1F6B50;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:4px 16px;border-radius:20px;margin-bottom:1rem;font-family:sans-serif;font-weight:500;}
-.hero h1{font-size:24px;font-weight:normal;color:#1A1A28;margin-bottom:.5rem;}
-.hero p{font-size:14px;font-family:sans-serif;max-width:460px;margin:0 auto;line-height:1.6;color:#3A3A48;}
-.content-note{background:rgba(255,255,255,0.7);border-radius:16px;padding:2rem;font-family:sans-serif;font-size:15px;line-height:1.8;color:#3A2E28;margin:2rem 0;}
-.content-note h3{font-size:17px;font-weight:700;margin-bottom:1rem;color:#1F6B50;}
-.content-note ul{padding-left:1.25rem;}
-.content-note li{margin-bottom:.6rem;}
-.back-btn{display:inline-block;margin-top:2rem;font-family:sans-serif;font-size:14px;color:#1F6B50;text-decoration:none;background:#C8EBE0;padding:10px 24px;border-radius:20px;font-weight:600;}
+.hero h1{font-size:25px;font-weight:normal;color:#0E2A1E;margin-bottom:.5rem;}
+.hero p{font-size:14px;color:#1A3A2E;font-family:sans-serif;max-width:460px;margin:0 auto;line-height:1.6;}
+.lbl{display:inline-block;font-size:11px;font-family:sans-serif;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:3px 14px;border-radius:20px;margin-bottom:.6rem;}
+.lbl-mint{background:#C8EBE0;color:#1F6B50;}
+.lbl-lilac{background:#EDD8F5;color:#5C2070;}
+.lbl-rose{background:#F9C6D0;color:#7A3045;}
+.lbl-sky{background:#C8DFF5;color:#1A4A7A;}
+.lbl-peach{background:#FDDEC8;color:#7A3D10;}
+.lbl-lav{background:#D8D0F0;color:#4A3870;}
+h2{font-size:21px;font-weight:normal;margin-bottom:.3rem;}
+h3{font-size:16px;font-weight:normal;font-style:italic;margin:1.4rem 0 .5rem;}
+.intro{font-size:14px;color:#4A6A60;font-family:sans-serif;margin-bottom:1.25rem;line-height:1.65;}
+.divider{height:1px;background:#C8EBE0;margin:2.5rem 0;}
+.tip{border-left:3px solid;padding:1rem 1.15rem;margin:1.1rem 0;font-family:sans-serif;font-size:13.5px;line-height:1.6;}
+.tip strong{display:block;font-size:11px;font-weight:700;margin-bottom:4px;letter-spacing:.06em;text-transform:uppercase;}
+.tip.mint{background:#EDF7F3;border-color:#6DBFA0;color:#1F6B50;}
+.tip.rose{background:#FEF0F3;border-color:#C47A8A;color:#7A3045;}
+.tip.lilac{background:#F7EEFE;border-color:#B87FD0;color:#5C2070;}
+.tip.sky{background:#EEF5FD;border-color:#7AAAD8;color:#1A4A7A;}
+.tip.peach{background:#FEF5EE;border-color:#E8A47A;color:#7A3D10;}
+table{width:100%;border-collapse:collapse;font-family:sans-serif;font-size:13px;margin:1.1rem 0 1.6rem;}
+thead tr{background:#C8EBE0;}
+thead th{padding:9px 13px;text-align:left;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1F6B50;}
+tbody tr:nth-child(odd){background:#F4FBF8;}
+tbody tr:nth-child(even){background:#E4F5EE;}
+tbody td{padding:9px 13px;border-bottom:.5px solid #C8EBE0;vertical-align:top;}
+.ok{color:#1F6B50;font-weight:500;}
+.no{color:#7A3045;font-weight:500;}
+.mid{color:#7A3D10;font-weight:500;}
+.steps{list-style:none;margin:1rem 0 1.5rem;}
+.steps li{display:flex;gap:13px;align-items:flex-start;margin-bottom:11px;font-family:sans-serif;font-size:13.5px;line-height:1.55;}
+.sn{min-width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;margin-top:1px;}
+.sn.mint{background:#C8EBE0;color:#1F6B50;}
+.sn.rose{background:#F9C6D0;color:#7A3045;}
+.sn.lilac{background:#EDD8F5;color:#5C2070;}
+.sn.sky{background:#C8DFF5;color:#1A4A7A;}
+.sn.peach{background:#FDDEC8;color:#7A3D10;}
+.sn.lav{background:#D8D0F0;color:#4A3870;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:11px;margin:1.1rem 0 1.6rem;}
+.card{border-radius:14px;padding:1rem;font-family:sans-serif;}
+.card h4{font-size:13px;font-weight:700;margin-bottom:5px;}
+.card p{font-size:12.5px;line-height:1.5;}
+.card.mint{background:#EDF7F3;color:#1F6B50;}
+.card.rose{background:#FEF0F3;color:#7A3045;}
+.card.lilac{background:#F7EEFE;color:#5C2070;}
+.card.sky{background:#EEF5FD;color:#1A4A7A;}
+.card.peach{background:#FEF5EE;color:#7A3D10;}
+.card.lav{background:#F0EDFC;color:#4A3870;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0 1.6rem;}
+.col-block{border-radius:14px;padding:1.1rem;font-family:sans-serif;}
+.col-block h4{font-size:13px;font-weight:700;margin-bottom:8px;}
+.col-block ol,.col-block ul{font-size:12.5px;line-height:1.8;padding-left:1.1rem;}
+.col-block.mint{background:#EDF7F3;color:#1F6B50;}
+.col-block.lilac{background:#F7EEFE;color:#5C2070;}
+.col-block.rose{background:#FEF0F3;color:#7A3045;}
+.flow{display:flex;gap:0;margin:1.1rem 0 1.6rem;align-items:stretch;flex-wrap:wrap;}
+.flow-step{flex:1;min-width:110px;border-radius:12px;padding:.85rem .9rem;font-family:sans-serif;font-size:12.5px;line-height:1.5;margin:4px;}
+.flow-step h4{font-size:12px;font-weight:700;margin-bottom:4px;}
+.flow-step.mint{background:#EDF7F3;color:#1F6B50;}
+.flow-step.rose{background:#FEF0F3;color:#7A3045;}
+.flow-step.lilac{background:#F7EEFE;color:#5C2070;}
+.flow-step.sky{background:#EEF5FD;color:#1A4A7A;}
+.flow-step.peach{background:#FEF5EE;color:#7A3D10;}
+.final{border-radius:18px;padding:2rem;text-align:center;margin-top:2.5rem;background:linear-gradient(135deg,#C8EBE0,#D8D0F0);}
+.final h3{font-style:normal;font-size:18px;margin-bottom:.5rem;color:#0E2A1E;}
+.final p{font-size:14px;color:#1A3A2E;font-family:sans-serif;line-height:1.6;}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="nav"><a href="index.html">← На главную</a></div>
-  <div class="hero">
-    <div class="hero-badge">Блок 3 · Приложения</div>
-    <h1>Устанавливать, обновлять,<br>удалять — без страха.</h1>
-    <p>Приложения — это просто программы. Ты ставишь их, удаляешь и управляешь ими.</p>
+<div class="nav"><a href="index.html">← На главную</a></div>
+<div class="hero">
+  <div class="hero-badge">Блок 3 · Приложения</div>
+  <h1>Устанавливать, обновлять,<br>удалять — без страха.</h1>
+  <p>Приложения — это просто программы. Ты ставишь их, удаляешь и управляешь ими. Никакой магии — только порядок.</p>
+</div>
+
+<div class="lbl lbl-mint">Урок 11</div>
+<h2>Как установить приложение</h2>
+<p class="intro">App Store (iPhone) и Google Play (Android) — официальные магазины приложений. Устанавливать приложения лучше только оттуда: так безопаснее всего.</p>
+<div class="two-col">
+  <div class="col-block mint">
+    <h4>На iPhone — App Store</h4>
+    <ol>
+      <li>Найди голубую иконку App Store</li>
+      <li>Нажми на лупу внизу (Поиск)</li>
+      <li>Введи название приложения</li>
+      <li>Нажми «Загрузить» или облачко</li>
+      <li>Подтверди Face ID или паролем</li>
+      <li>Жди — иконка появится на экране</li>
+    </ol>
   </div>
-  <div class="content-note">
-    <h3>Уроки этого блока:</h3>
-    <ul>
-      <li><strong>Урок 11</strong> — Как установить приложение из App Store и Google Play</li>
-      <li><strong>Урок 12</strong> — Как обновлять приложения и зачем это нужно</li>
-      <li><strong>Урок 13</strong> — Как удалить приложение (и что при этом происходит с аккаунтом)</li>
-      <li><strong>Урок 14</strong> — Приложение не открывается — пошаговый алгоритм решения</li>
-      <li><strong>Урок 15</strong> — Какие приложения «съедают» батарею и интернет и как это проверить</li>
-    </ul>
+  <div class="col-block lilac">
+    <h4>На Android — Google Play</h4>
+    <ol>
+      <li>Найди цветную иконку Google Play</li>
+      <li>Нажми на строку поиска вверху</li>
+      <li>Введи название приложения</li>
+      <li>Выбери нужное → нажми «Установить»</li>
+      <li>Подтверди отпечатком или паролем</li>
+      <li>Жди — иконка появится на экране</li>
+    </ol>
   </div>
-  <a class="back-btn" href="index.html">← Вернуться к списку блоков</a>
+</div>
+<div class="tip mint"><strong>Как выбрать нужное приложение из списка</strong>Ищи приложение с большим количеством оценок (тысячи и больше) и рейтингом от 4 звёзд. Обращай внимание на разработчика — у официальных приложений это известная компания.</div>
+<h3>На что обратить внимание перед установкой</h3>
+<table>
+  <thead><tr><th>Что проверить</th><th>Хороший знак</th><th>Осторожно</th></tr></thead>
+  <tbody>
+    <tr><td>Рейтинг</td><td class="ok">4 звезды и выше</td><td class="no">Ниже 3,5 или вообще нет оценок</td></tr>
+    <tr><td>Количество отзывов</td><td class="ok">Тысячи и больше</td><td class="no">Меньше 50 — приложение новое или неизвестное</td></tr>
+    <tr><td>Разработчик</td><td class="ok">Известная компания</td><td class="no">Непонятное название, похожее на известное</td></tr>
+    <tr><td>Дата последнего обновления</td><td class="ok">Менее года назад</td><td class="no">Не обновлялось 2+ года — брошено</td></tr>
+    <tr><td>Запрашиваемые разрешения</td><td class="ok">Логичные для функций приложения</td><td class="no">Калькулятор просит доступ к контактам — странно</td></tr>
+  </tbody>
+</table>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-lilac">Урок 12</div>
+<h2>Как обновлять приложения и зачем</h2>
+<p class="intro">Обновления — это не просто новые кнопки. Они исправляют ошибки, закрывают дыры в безопасности и улучшают скорость работы.</p>
+<div class="grid">
+  <div class="card mint"><h4>Исправляют ошибки</h4><p>Приложение зависает или вылетает? Часто следующее обновление это уже починило.</p></div>
+  <div class="card lilac"><h4>Защищают от взлома</h4><p>Хакеры находят уязвимости в старых версиях. Обновление их закрывает.</p></div>
+  <div class="card sky"><h4>Добавляют функции</h4><p>Новые фильтры, улучшенный интерфейс, более быстрая работа — всё это в обновлениях.</p></div>
+  <div class="card peach"><h4>Совместимость с системой</h4><p>Старое приложение на новой iOS/Android может начать глючить. Обновление решает это.</p></div>
+</div>
+<h3>Как обновить вручную</h3>
+<ul class="steps">
+  <li><span class="sn mint">1</span><span>На iPhone: открой App Store → нажми на фото профиля справа вверху → прокрути вниз до раздела «Доступные обновления».</span></li>
+  <li><span class="sn lilac">2</span><span>На Android: открой Google Play → нажми на фото профиля → «Управление приложениями и устройством» → «Доступны обновления».</span></li>
+  <li><span class="sn rose">3</span><span>Нажми «Обновить все» — и пусть телефон сделает всё сам, пока ты пьёшь кофе.</span></li>
+</ul>
+<h3>Настроить автообновление — и забыть</h3>
+<ul class="steps">
+  <li><span class="sn sky">1</span><span>На iPhone: Настройки → App Store → включи «Обновления приложений».</span></li>
+  <li><span class="sn peach">2</span><span>На Android: Google Play → фото профиля → Настройки → «Автоматически обновлять приложения» → «Только через Wi-Fi».</span></li>
+</ul>
+<div class="tip sky"><strong>Совет инструктора</strong>Выбирай обновление только по Wi-Fi, а не через мобильный интернет — иначе потратишь трафик незаметно для себя.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-rose">Урок 13</div>
+<h2>Как удалить приложение</h2>
+<p class="intro">Удалить приложение — это как выбросить ненужную вещь из шкафа. Смело и без сожалений. Если понадобится — всегда можно установить снова бесплатно.</p>
+<div class="two-col">
+  <div class="col-block mint">
+    <h4>На iPhone</h4>
+    <ol>
+      <li>Нажми и удерживай иконку приложения</li>
+      <li>Появится меню — выбери «Удалить приложение»</li>
+      <li>Подтверди «Удалить»</li>
+    </ol>
+  </div>
+  <div class="col-block lilac">
+    <h4>На Android</h4>
+    <ol>
+      <li>Нажми и удерживай иконку</li>
+      <li>Перетащи на «Удалить» вверху экрана</li>
+      <li>Или нажми «Удалить» в появившемся меню</li>
+    </ol>
+  </div>
+</div>
+<table>
+  <thead><tr><th>Ситуация</th><th>Что происходит при удалении</th><th>Данные сохранятся?</th></tr></thead>
+  <tbody>
+    <tr><td>Удаляю Instagram</td><td>Приложение исчезает с телефона</td><td class="ok">Да — аккаунт и фото в Instagram остаются</td></tr>
+    <tr><td>Удаляю WhatsApp</td><td>Приложение исчезает с телефона</td><td class="mid">Переписка удалится, если нет резервной копии</td></tr>
+    <tr><td>Удаляю игру</td><td>Приложение и прогресс удаляются</td><td class="no">Нет, если прогресс не привязан к аккаунту</td></tr>
+    <tr><td>Удаляю банковское приложение</td><td>Только приложение, не счёт</td><td class="ok">Да — деньги и счёт в банке остаются</td></tr>
+  </tbody>
+</table>
+<div class="tip rose"><strong>Важно перед удалением WhatsApp</strong>Сначала сделай резервную копию переписки: WhatsApp → Настройки → Чаты → Резервная копия. Иначе история сообщений удалится навсегда.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-sky">Урок 14</div>
+<h2>Приложение не открывается — что делать</h2>
+<p class="intro">Приложение вылетает, зависает или просто не запускается. Не паникуем — есть чёткий алгоритм.</p>
+<div class="flow">
+  <div class="flow-step mint"><h4>Шаг 1</h4><p>Закрой приложение полностью (смахни вверх) и открой снова.</p></div>
+  <div class="flow-step lilac"><h4>Шаг 2</h4><p>Перезагрузи телефон. Помогает в 80% случаев.</p></div>
+  <div class="flow-step rose"><h4>Шаг 3</h4><p>Проверь обновления — возможно, вышла новая версия.</p></div>
+  <div class="flow-step sky"><h4>Шаг 4</h4><p>Очисти кэш (Android) или переустанови приложение (iPhone).</p></div>
+  <div class="flow-step peach"><h4>Шаг 5</h4><p>Удали и установи заново. Это почти всегда решает проблему.</p></div>
+</div>
+<table>
+  <thead><tr><th>Симптом</th><th>Вероятная причина</th><th>Решение</th></tr></thead>
+  <tbody>
+    <tr><td>Вылетает сразу при запуске</td><td>Устаревшая версия или конфликт с системой</td><td>Обнови или переустанови</td></tr>
+    <tr><td>Зависает посередине</td><td>Переполнен кэш или мало памяти</td><td>Очисти кэш, освободи место</td></tr>
+    <tr><td>Показывает ошибку «нет сети»</td><td>Проблема с интернетом или серверами приложения</td><td>Проверь Wi-Fi, подожди немного</td></tr>
+    <tr><td>Не загружает картинки</td><td>Медленный интернет или переполнен кэш</td><td>Переключись на Wi-Fi, почисти кэш</td></tr>
+    <tr><td>Вылетает только одно приложение</td><td>Баг в этом конкретном приложении</td><td>Переустанови и следи за обновлениями</td></tr>
+  </tbody>
+</table>
+<div class="tip lilac"><strong>Когда ничего не помогает</strong>Зайди на страницу приложения в App Store / Google Play и почитай последние отзывы. Если многие жалуются на то же самое — это проблема на стороне разработчика, и остаётся только ждать их исправления.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-peach">Урок 15</div>
+<h2>Какие приложения «съедают» батарею и интернет</h2>
+<p class="intro">Телефон разрядился к обеду, а интернет закончился раньше срока? Виновников легко найти прямо в настройках.</p>
+<h3>Как найти «пожирателей» батареи</h3>
+<ul class="steps">
+  <li><span class="sn mint">1</span><span>На iPhone: Настройки → Аккумулятор. Прокрути вниз — список приложений с процентами.</span></li>
+  <li><span class="sn lilac">2</span><span>На Android: Настройки → Аккумулятор → «Использование аккумулятора».</span></li>
+  <li><span class="sn rose">3</span><span>Если приложение вверху списка, но ты им пользуешься мало — очисти его кэш или переустанови.</span></li>
+</ul>
+<h3>Как найти «пожирателей» мобильного интернета</h3>
+<ul class="steps">
+  <li><span class="sn sky">1</span><span>На iPhone: Настройки → Сотовая связь. Прокрути вниз — каждое приложение с расходом трафика.</span></li>
+  <li><span class="sn peach">2</span><span>На Android: Настройки → Сеть и интернет → Использование данных.</span></li>
+  <li><span class="sn lav">3</span><span>Приложениям, которым интернет в фоне не нужен, можно его запретить в настройках.</span></li>
+</ul>
+<table>
+  <thead><tr><th>Приложение</th><th>Расходует батарею</th><th>Расходует интернет</th><th>Совет</th></tr></thead>
+  <tbody>
+    <tr><td>TikTok / Reels</td><td class="no">Очень много</td><td class="no">Очень много</td><td>Смотри только по Wi-Fi</td></tr>
+    <tr><td>Instagram</td><td class="no">Много</td><td class="no">Много</td><td>Отключи автовоспроизведение видео</td></tr>
+    <tr><td>Google Maps / навигация</td><td class="no">Очень много</td><td class="mid">Средне</td><td>Скачивай карты офлайн заранее</td></tr>
+    <tr><td>WhatsApp / Telegram</td><td class="mid">Умеренно</td><td class="mid">Умеренно</td><td>Ограничь автозагрузку медиа</td></tr>
+    <tr><td>Почта</td><td class="mid">Умеренно</td><td class="ok">Мало</td><td>Поставь проверку реже</td></tr>
+    <tr><td>Заметки / Календарь</td><td class="ok">Мало</td><td class="ok">Мало</td><td>Всё хорошо, не трогай</td></tr>
+  </tbody>
+</table>
+<div class="tip peach"><strong>Лайфхак с фоновым обновлением</strong>На iPhone: Настройки → Основные → Обновление контента. Запрети приложениям обновляться в фоне — это сразу сэкономит и батарею, и интернет.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-lav">Шпаргалка блока 3</div>
+<h2>Пять правил работы с приложениями</h2>
+<table>
+  <thead><tr><th>Правило</th><th>Как запомнить</th></tr></thead>
+  <tbody>
+    <tr><td>Устанавливай только из App Store и Google Play</td><td>«Только официальный магазин — только безопасность»</td></tr>
+    <tr><td>Включи автообновление по Wi-Fi</td><td>«Пусть телефон сам следит за порядком»</td></tr>
+    <tr><td>Не бойся удалять приложения — аккаунт не пропадёт</td><td>«Удалила приложение, не аккаунт»</td></tr>
+    <tr><td>Приложение глючит — сначала перезагрузи телефон</td><td>«Перезагрузка решает 80% проблем»</td></tr>
+    <tr><td>Проверяй, кто ест батарею и трафик</td><td>«TikTok и карты — главные обжоры»</td></tr>
+  </tbody>
+</table>
+
+<div class="final">
+  <h3>Блок 3 пройден!</h3>
+  <p>Теперь ты устанавливаешь, обновляешь и удаляешь приложения уверенно — и знаешь, что делать, когда что-то идёт не так.</p>
+</div>
 </div>
 </body>
 </html>

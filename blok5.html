@@ -6,40 +6,188 @@
 <title>Блок 5 — Пароли и безопасность</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:Georgia,serif;background:#FDF6EE;color:#3A2E28;line-height:1.7;}
+body{font-family:Georgia,serif;background:#FFF8F5;color:#3A1A10;line-height:1.7;}
 .wrap{padding:2rem 1.5rem 4rem;max-width:720px;margin:0 auto;}
 .nav{margin-bottom:2rem;}
-.nav a{font-family:sans-serif;font-size:13px;color:#7A3D10;text-decoration:none;background:rgba(0,0,0,0.06);padding:6px 16px;border-radius:20px;}
-.hero{border-radius:20px;padding:2.5rem 2rem;text-align:center;margin-bottom:2.5rem;background:#FDDEC8;}
+.nav a{font-family:sans-serif;font-size:13px;color:#7A3D10;text-decoration:none;background:#FDDEC8;padding:6px 16px;border-radius:20px;}
+.hero{border-radius:20px;padding:2.5rem 2rem;text-align:center;margin-bottom:2.5rem;background:linear-gradient(135deg,#FDDEC8,#F9C6D0);}
 .hero-badge{display:inline-block;background:rgba(255,255,255,0.55);color:#7A3D10;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:4px 16px;border-radius:20px;margin-bottom:1rem;font-family:sans-serif;font-weight:500;}
-.hero h1{font-size:24px;font-weight:normal;color:#1A1A28;margin-bottom:.5rem;}
-.hero p{font-size:14px;font-family:sans-serif;max-width:460px;margin:0 auto;line-height:1.6;color:#3A3A48;}
-.content-note{background:rgba(255,255,255,0.7);border-radius:16px;padding:2rem;font-family:sans-serif;font-size:15px;line-height:1.8;color:#3A2E28;margin:2rem 0;}
-.content-note h3{font-size:17px;font-weight:700;margin-bottom:1rem;color:#7A3D10;}
-.content-note ul{padding-left:1.25rem;}
-.content-note li{margin-bottom:.6rem;}
-.back-btn{display:inline-block;margin-top:2rem;font-family:sans-serif;font-size:14px;color:#7A3D10;text-decoration:none;background:#FDDEC8;padding:10px 24px;border-radius:20px;font-weight:600;}
+.hero h1{font-size:25px;font-weight:normal;color:#2A0E08;margin-bottom:.5rem;}
+.hero p{font-size:14px;color:#5A2A18;font-family:sans-serif;max-width:460px;margin:0 auto;line-height:1.6;}
+.lbl{display:inline-block;font-size:11px;font-family:sans-serif;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:3px 14px;border-radius:20px;margin-bottom:.6rem;}
+.lbl-peach{background:#FDDEC8;color:#7A3D10;}
+.lbl-rose{background:#F9C6D0;color:#7A3045;}
+.lbl-mint{background:#C8EBE0;color:#1F6B50;}
+.lbl-sky{background:#C8DFF5;color:#1A4A7A;}
+.lbl-lilac{background:#EDD8F5;color:#5C2070;}
+.lbl-lav{background:#D8D0F0;color:#4A3870;}
+h2{font-size:21px;font-weight:normal;margin-bottom:.3rem;}
+h3{font-size:16px;font-weight:normal;font-style:italic;margin:1.4rem 0 .5rem;}
+.intro{font-size:14px;color:#7A5A50;font-family:sans-serif;margin-bottom:1.25rem;line-height:1.65;}
+.divider{height:1px;background:#FDDEC8;margin:2.5rem 0;}
+.tip{border-left:3px solid;padding:1rem 1.15rem;margin:1.1rem 0;font-family:sans-serif;font-size:13.5px;line-height:1.6;}
+.tip strong{display:block;font-size:11px;font-weight:700;margin-bottom:4px;letter-spacing:.06em;text-transform:uppercase;}
+.tip.peach{background:#FEF5EE;border-color:#E8A47A;color:#7A3D10;}
+.tip.rose{background:#FEF0F3;border-color:#C47A8A;color:#7A3045;}
+.tip.mint{background:#EDF7F3;border-color:#6DBFA0;color:#1F6B50;}
+.tip.sky{background:#EEF5FD;border-color:#7AAAD8;color:#1A4A7A;}
+.tip.lilac{background:#F7EEFE;border-color:#B87FD0;color:#5C2070;}
+table{width:100%;border-collapse:collapse;font-family:sans-serif;font-size:13px;margin:1.1rem 0 1.6rem;}
+thead tr{background:#FDDEC8;}
+thead th{padding:9px 13px;text-align:left;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#7A3D10;}
+tbody tr:nth-child(odd){background:#FFFAF6;}
+tbody tr:nth-child(even){background:#FFF0E8;}
+tbody td{padding:9px 13px;border-bottom:.5px solid #FDDEC8;vertical-align:top;}
+.ok{color:#1F6B50;font-weight:500;}
+.no{color:#7A3045;font-weight:500;}
+.mid{color:#7A3D10;font-weight:500;}
+.steps{list-style:none;margin:1rem 0 1.5rem;}
+.steps li{display:flex;gap:13px;align-items:flex-start;margin-bottom:11px;font-family:sans-serif;font-size:13.5px;line-height:1.55;}
+.sn{min-width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;margin-top:1px;}
+.sn.peach{background:#FDDEC8;color:#7A3D10;}
+.sn.rose{background:#F9C6D0;color:#7A3045;}
+.sn.mint{background:#C8EBE0;color:#1F6B50;}
+.sn.sky{background:#C8DFF5;color:#1A4A7A;}
+.sn.lilac{background:#EDD8F5;color:#5C2070;}
+.sn.lav{background:#D8D0F0;color:#4A3870;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:11px;margin:1.1rem 0 1.6rem;}
+.card{border-radius:14px;padding:1rem;font-family:sans-serif;}
+.card h4{font-size:13px;font-weight:700;margin-bottom:5px;}
+.card p{font-size:12.5px;line-height:1.5;}
+.card.peach{background:#FEF5EE;color:#7A3D10;}
+.card.rose{background:#FEF0F3;color:#7A3045;}
+.card.sky{background:#EEF5FD;color:#1A4A7A;}
+.card.mint{background:#EDF7F3;color:#1F6B50;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0 1.6rem;}
+.col-block{border-radius:14px;padding:1.1rem;font-family:sans-serif;}
+.col-block h4{font-size:13px;font-weight:700;margin-bottom:8px;}
+.col-block ul,.col-block ol{font-size:12.5px;line-height:1.8;padding-left:1.1rem;}
+.col-block.sky{background:#EEF5FD;color:#1A4A7A;}
+.col-block.rose{background:#FEF0F3;color:#7A3045;}
+.final{border-radius:18px;padding:2rem;text-align:center;margin-top:2.5rem;background:linear-gradient(135deg,#FDDEC8,#F9C6D0);}
+.final h3{font-style:normal;font-size:18px;margin-bottom:.5rem;color:#2A0E08;}
+.final p{font-size:14px;color:#5A2A18;font-family:sans-serif;line-height:1.6;}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="nav"><a href="index.html">← На главную</a></div>
-  <div class="hero">
-    <div class="hero-badge">Блок 5 · Пароли и безопасность</div>
-    <h1>Твои данные —<br>твоя крепость.</h1>
-    <p>Надёжные пароли, двухфакторная защита, мошенники и взломанные аккаунты.</p>
-  </div>
-  <div class="content-note">
-    <h3>Уроки этого блока:</h3>
+<div class="nav"><a href="index.html">← На главную</a></div>
+<div class="hero">
+  <div class="hero-badge">Блок 5 · Пароли и безопасность</div>
+  <h1>Твои данные —<br>твоя крепость.</h1>
+  <p>Надёжные пароли, двухфакторная защита, мошенники и взломанные аккаунты — разбираем всё спокойно и по шагам.</p>
+</div>
+
+<div class="lbl lbl-peach">Урок 21</div>
+<h2>Как придумать надёжный пароль</h2>
+<p class="intro">«12345» и «qwerty» — это не пароли, это приглашение войти. Хороший пароль — это три вещи: длина, разнообразие и уникальность для каждого сайта.</p>
+<table>
+  <thead><tr><th>Пароль</th><th>Надёжность</th><th>Почему</th></tr></thead>
+  <tbody>
+    <tr><td>12345678</td><td class="no">Очень слабый</td><td>Подбирается за секунды</td></tr>
+    <tr><td>Masha1990</td><td class="no">Слабый</td><td>Имя + год рождения — первое, что пробуют</td></tr>
+    <tr><td>Masha@Home!</td><td class="mid">Средний</td><td>Лучше, но имя всё ещё угадываемо</td></tr>
+    <tr><td>K8#mPq!vL2xR</td><td class="ok">Сильный</td><td>Случайный, длинный, разнообразный</td></tr>
+    <tr><td>Солнце-Кошка-Дерево-7!</td><td class="ok">Отличный</td><td>Длинный, запоминаемый, непредсказуемый</td></tr>
+  </tbody>
+</table>
+<div class="grid">
+  <div class="card peach"><h4>Минимум 12 символов</h4><p>Чем длиннее — тем лучше. 16+ символов взломать практически невозможно.</p></div>
+  <div class="card sky"><h4>Разные типы символов</h4><p>Большие буквы, маленькие, цифры, символы (!@#$%). Все четыре вместе.</p></div>
+  <div class="card mint"><h4>Уникальный для каждого сайта</h4><p>Взломали один сайт — пусть только он пострадает, не все твои аккаунты.</p></div>
+  <div class="card rose"><h4>Ничего личного</h4><p>Никаких имён, дат рождения, кличек питомцев. Это первое, что проверяют мошенники.</p></div>
+</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-rose">Урок 22</div>
+<h2>Что такое двухфакторная аутентификация</h2>
+<p class="intro">Двухфакторная аутентификация (2FA) — это второй замок на двери. Даже если кто-то узнал твой пароль, без второго кода он не войдёт.</p>
+<ul class="steps">
+  <li><span class="sn peach">1</span><span>Как это работает: ты вводишь пароль → тебе приходит SMS с кодом → вводишь код → входишь. Два шага, двойная защита.</span></li>
+  <li><span class="sn rose">2</span><span>Instagram: Настройки → Центр аккаунтов → Пароль и безопасность → Двухфакторная аутентификация → выбери «SMS».</span></li>
+  <li><span class="sn mint">3</span><span>Google: myaccount.google.com → Безопасность → Двухэтапная аутентификация → Начать.</span></li>
+  <li><span class="sn sky">4</span><span>Telegram: Настройки → Конфиденциальность → Двухэтапная аутентификация → установи пароль.</span></li>
+</ul>
+<div class="tip lilac"><strong>Включи хотя бы для этих аккаунтов</strong>Почта, Instagram, банковские приложения, Telegram. Это самые ценные аккаунты — именно с них начинают мошенники.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-mint">Урок 23</div>
+<h2>Как не попасться на мошенников</h2>
+<p class="intro">Фишинг — это когда мошенники притворяются банком, магазином или подругой, чтобы ты сама отдала им пароль или деньги.</p>
+<table>
+  <thead><tr><th>Как выглядит</th><th>Признак обмана</th><th>Что делать</th></tr></thead>
+  <tbody>
+    <tr><td>«Ваша карта заблокирована, срочно позвоните»</td><td class="no">Срочность и страх — главный инструмент</td><td>Положи трубку. Позвони в банк сама по номеру на карте</td></tr>
+    <tr><td>Ссылка в SMS «Ваш заказ, подтвердите»</td><td class="no">Неожиданная ссылка от незнакомого номера</td><td>Не нажимай. Зайди на сайт магазина напрямую</td></tr>
+    <tr><td>«Привет, это я, попала в беду, переведи деньги»</td><td class="no">Срочность + просьба перевести деньги</td><td>Позвони этому человеку лично и убедись</td></tr>
+    <tr><td>«Вы выиграли приз, введите данные карты»</td><td class="no">Неожиданный приз требует данных</td><td>Удали. Настоящие призы так не работают</td></tr>
+    <tr><td>Сайт банка с подозрительным адресом</td><td class="no">Адрес не совпадает с официальным</td><td>Проверь адрес — официальный адрес всегда один</td></tr>
+  </tbody>
+</table>
+<div class="tip rose"><strong>Три правила, которые спасут от мошенников</strong>1. Банк никогда не просит назвать код из SMS по телефону. 2. Настоящие акции не требуют предоплаты. 3. Если торопят и давят — это манипуляция. Положи трубку.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-sky">Урок 24</div>
+<h2>Что делать, если взломали аккаунт</h2>
+<p class="intro">Не можешь войти в Instagram или Telegram, хотя пароль не меняла? Действуй быстро — каждая минута важна.</p>
+<ul class="steps">
+  <li><span class="sn peach">1</span><span>На странице входа нажми «Забыли пароль?». Следуй инструкции для восстановления через почту или телефон.</span></li>
+  <li><span class="sn rose">2</span><span>Как только войдёшь — сразу смени пароль на новый, сложный.</span></li>
+  <li><span class="sn mint">3</span><span>Зайди в настройки безопасности → «Активные сессии» → завершить все другие сессии.</span></li>
+  <li><span class="sn sky">4</span><span>Включи двухфакторную аутентификацию — сразу, прямо сейчас.</span></li>
+  <li><span class="sn lilac">5</span><span>Предупреди друзей: если взломщики писали с твоего аккаунта с просьбой денег — пусть они знают, что это была не ты.</span></li>
+</ul>
+<div class="tip sky"><strong>Если не можешь восстановить сама</strong>В Instagram есть «Дополнительная помощь» на странице входа — там есть процесс с видеоселфи для подтверждения личности. В Telegram напиши в официальную поддержку.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-lilac">Урок 25</div>
+<h2>Менеджер паролей — нужен ли он</h2>
+<p class="intro">Менеджер паролей — это приложение, которое запоминает все твои пароли вместо тебя. Ты помнишь только один главный пароль, остальное — за тебя.</p>
+<div class="two-col">
+  <div class="col-block sky">
+    <h4>Плюсы</h4>
     <ul>
-      <li><strong>Урок 21</strong> — Как придумать надёжный пароль и не забыть его</li>
-      <li><strong>Урок 22</strong> — Что такое двухфакторная аутентификация и как её включить</li>
-      <li><strong>Урок 23</strong> — Как не попасться на фишинг и мошеннические сообщения</li>
-      <li><strong>Урок 24</strong> — Что делать, если взломали аккаунт в Instagram или WhatsApp</li>
-      <li><strong>Урок 25</strong> — Менеджер паролей — что это и нужен ли он мне</li>
+      <li>Помнит сотни паролей</li>
+      <li>Генерирует сложные пароли</li>
+      <li>Заполняет автоматически</li>
+      <li>Работает на всех устройствах</li>
+      <li>Предупреждает о взломах</li>
     </ul>
   </div>
-  <a class="back-btn" href="index.html">← Вернуться к списку блоков</a>
+  <div class="col-block rose">
+    <h4>С чего начать</h4>
+    <ul>
+      <li>iPhone: встроенный «Связка ключей» — уже есть в Настройках</li>
+      <li>Android: Google Password Manager — встроен в Chrome</li>
+      <li>Для обоих: Bitwarden — бесплатный, надёжный, на русском</li>
+    </ul>
+  </div>
+</div>
+<div class="tip mint"><strong>Совет инструктора</strong>Не надо устанавливать ничего сложного. Если у тебя iPhone — «Связка ключей iCloud» уже встроена и работает. Когда создаёшь новый пароль, iPhone предложит его сохранить — просто соглашайся.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-lav">Шпаргалка блока 5</div>
+<h2>Пять правил безопасности</h2>
+<table>
+  <thead><tr><th>Правило</th><th>Как запомнить</th></tr></thead>
+  <tbody>
+    <tr><td>Используй разные пароли для важных сайтов</td><td>«Один ключ — одна дверь»</td></tr>
+    <tr><td>Включи 2FA на почте и соцсетях</td><td>«Два замка лучше одного»</td></tr>
+    <tr><td>Не называй коды из SMS никому — даже «банку»</td><td>«Настоящий банк не спрашивает коды»</td></tr>
+    <tr><td>Торопят и пугают — положи трубку</td><td>«Спешка — признак мошенника»</td></tr>
+    <tr><td>Используй встроенный менеджер паролей</td><td>«Пусть телефон помнит за меня»</td></tr>
+  </tbody>
+</table>
+
+<div class="final">
+  <h3>Блок 5 пройден!</h3>
+  <p>Теперь ты знаешь, как создавать надёжные пароли, защищать аккаунты и не попадаться на мошенников.</p>
+</div>
 </div>
 </body>
 </html>

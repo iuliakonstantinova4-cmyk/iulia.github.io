@@ -6,40 +6,190 @@
 <title>Блок 4 — Интернет и Wi-Fi</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:Georgia,serif;background:#FDF6EE;color:#3A2E28;line-height:1.7;}
+body{font-family:Georgia,serif;background:#EEF5FD;color:#1A2A3A;line-height:1.7;}
 .wrap{padding:2rem 1.5rem 4rem;max-width:720px;margin:0 auto;}
 .nav{margin-bottom:2rem;}
-.nav a{font-family:sans-serif;font-size:13px;color:#1A4A7A;text-decoration:none;background:rgba(0,0,0,0.06);padding:6px 16px;border-radius:20px;}
-.hero{border-radius:20px;padding:2.5rem 2rem;text-align:center;margin-bottom:2.5rem;background:#C8DFF5;}
+.nav a{font-family:sans-serif;font-size:13px;color:#1A4A7A;text-decoration:none;background:#C8DFF5;padding:6px 16px;border-radius:20px;}
+.hero{border-radius:20px;padding:2.5rem 2rem;text-align:center;margin-bottom:2.5rem;background:linear-gradient(135deg,#C8DFF5,#C8EBE0);}
 .hero-badge{display:inline-block;background:rgba(255,255,255,0.55);color:#1A4A7A;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:4px 16px;border-radius:20px;margin-bottom:1rem;font-family:sans-serif;font-weight:500;}
-.hero h1{font-size:24px;font-weight:normal;color:#1A1A28;margin-bottom:.5rem;}
-.hero p{font-size:14px;font-family:sans-serif;max-width:460px;margin:0 auto;line-height:1.6;color:#3A3A48;}
-.content-note{background:rgba(255,255,255,0.7);border-radius:16px;padding:2rem;font-family:sans-serif;font-size:15px;line-height:1.8;color:#3A2E28;margin:2rem 0;}
-.content-note h3{font-size:17px;font-weight:700;margin-bottom:1rem;color:#1A4A7A;}
-.content-note ul{padding-left:1.25rem;}
-.content-note li{margin-bottom:.6rem;}
-.back-btn{display:inline-block;margin-top:2rem;font-family:sans-serif;font-size:14px;color:#1A4A7A;text-decoration:none;background:#C8DFF5;padding:10px 24px;border-radius:20px;font-weight:600;}
+.hero h1{font-size:25px;font-weight:normal;color:#0E1E2E;margin-bottom:.5rem;}
+.hero p{font-size:14px;color:#1A2A3A;font-family:sans-serif;max-width:460px;margin:0 auto;line-height:1.6;}
+.lbl{display:inline-block;font-size:11px;font-family:sans-serif;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:3px 14px;border-radius:20px;margin-bottom:.6rem;}
+.lbl-sky{background:#C8DFF5;color:#1A4A7A;}
+.lbl-mint{background:#C8EBE0;color:#1F6B50;}
+.lbl-lilac{background:#EDD8F5;color:#5C2070;}
+.lbl-rose{background:#F9C6D0;color:#7A3045;}
+.lbl-peach{background:#FDDEC8;color:#7A3D10;}
+.lbl-lav{background:#D8D0F0;color:#4A3870;}
+h2{font-size:21px;font-weight:normal;margin-bottom:.3rem;}
+h3{font-size:16px;font-weight:normal;font-style:italic;margin:1.4rem 0 .5rem;}
+.intro{font-size:14px;color:#4A5A6A;font-family:sans-serif;margin-bottom:1.25rem;line-height:1.65;}
+.divider{height:1px;background:#C8DFF5;margin:2.5rem 0;}
+.tip{border-left:3px solid;padding:1rem 1.15rem;margin:1.1rem 0;font-family:sans-serif;font-size:13.5px;line-height:1.6;}
+.tip strong{display:block;font-size:11px;font-weight:700;margin-bottom:4px;letter-spacing:.06em;text-transform:uppercase;}
+.tip.sky{background:#EEF5FD;border-color:#7AAAD8;color:#1A4A7A;}
+.tip.mint{background:#EDF7F3;border-color:#6DBFA0;color:#1F6B50;}
+.tip.rose{background:#FEF0F3;border-color:#C47A8A;color:#7A3045;}
+.tip.peach{background:#FEF5EE;border-color:#E8A47A;color:#7A3D10;}
+table{width:100%;border-collapse:collapse;font-family:sans-serif;font-size:13px;margin:1.1rem 0 1.6rem;}
+thead tr{background:#C8DFF5;}
+thead th{padding:9px 13px;text-align:left;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1A4A7A;}
+tbody tr:nth-child(odd){background:#F4F8FD;}
+tbody tr:nth-child(even){background:#E6F0F8;}
+tbody td{padding:9px 13px;border-bottom:.5px solid #C8DFF5;vertical-align:top;}
+.ok{color:#1F6B50;font-weight:500;}
+.no{color:#7A3045;font-weight:500;}
+.mid{color:#7A3D10;font-weight:500;}
+.steps{list-style:none;margin:1rem 0 1.5rem;}
+.steps li{display:flex;gap:13px;align-items:flex-start;margin-bottom:11px;font-family:sans-serif;font-size:13.5px;line-height:1.55;}
+.sn{min-width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;margin-top:1px;}
+.sn.sky{background:#C8DFF5;color:#1A4A7A;}
+.sn.mint{background:#C8EBE0;color:#1F6B50;}
+.sn.rose{background:#F9C6D0;color:#7A3045;}
+.sn.lilac{background:#EDD8F5;color:#5C2070;}
+.sn.peach{background:#FDDEC8;color:#7A3D10;}
+.sn.lav{background:#D8D0F0;color:#4A3870;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:11px;margin:1.1rem 0 1.6rem;}
+.card{border-radius:14px;padding:1rem;font-family:sans-serif;}
+.card h4{font-size:13px;font-weight:700;margin-bottom:5px;}
+.card p{font-size:12.5px;line-height:1.5;}
+.card.sky{background:#EEF5FD;color:#1A4A7A;}
+.card.mint{background:#EDF7F3;color:#1F6B50;}
+.card.rose{background:#FEF0F3;color:#7A3045;}
+.card.lav{background:#F0EDFC;color:#4A3870;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0 1.6rem;}
+.col-block{border-radius:14px;padding:1.1rem;font-family:sans-serif;}
+.col-block h4{font-size:13px;font-weight:700;margin-bottom:8px;}
+.col-block ol,.col-block ul{font-size:12.5px;line-height:1.8;padding-left:1.1rem;}
+.col-block.sky{background:#EEF5FD;color:#1A4A7A;}
+.col-block.mint{background:#EDF7F3;color:#1F6B50;}
+.final{border-radius:18px;padding:2rem;text-align:center;margin-top:2.5rem;background:linear-gradient(135deg,#C8DFF5,#C8EBE0);}
+.final h3{font-style:normal;font-size:18px;margin-bottom:.5rem;color:#0E1E2E;}
+.final p{font-size:14px;color:#1A2A3A;font-family:sans-serif;line-height:1.6;}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="nav"><a href="index.html">← На главную</a></div>
-  <div class="hero">
-    <div class="hero-badge">Блок 4 · Интернет и Wi-Fi</div>
-    <h1>Wi-Fi, пароли и сеть —<br>всё под контролем.</h1>
-    <p>Подключение к интернету, пароли от сети, сбои и контроль трафика.</p>
+<div class="nav"><a href="index.html">← На главную</a></div>
+<div class="hero">
+  <div class="hero-badge">Блок 4 · Интернет и Wi-Fi</div>
+  <h1>Wi-Fi, пароли и сеть —<br>всё под контролем.</h1>
+  <p>Подключение к интернету, пароли, сбои, публичные сети и контроль трафика — разбираем всё по шагам.</p>
+</div>
+
+<div class="lbl lbl-sky">Урок 16</div>
+<h2>Как подключиться к Wi-Fi</h2>
+<p class="intro">Wi-Fi — это беспроводной интернет. Подключиться к нему проще, чем кажется: нужно знать название сети и пароль.</p>
+<div class="two-col">
+  <div class="col-block sky">
+    <h4>На iPhone</h4>
+    <ol>
+      <li>Настройки → Wi-Fi</li>
+      <li>Включи переключатель вверху</li>
+      <li>Выбери свою сеть из списка</li>
+      <li>Введи пароль → «Подключиться»</li>
+      <li>Появится галочка — готово</li>
+    </ol>
   </div>
-  <div class="content-note">
-    <h3>Уроки этого блока:</h3>
-    <ul>
-      <li><strong>Урок 16</strong> — Как подключиться к Wi-Fi и ввести пароль</li>
-      <li><strong>Урок 17</strong> — Wi-Fi не работает — простые шаги для исправления</li>
-      <li><strong>Урок 18</strong> — Как узнать пароль от своего домашнего Wi-Fi</li>
-      <li><strong>Урок 19</strong> — Безопасно ли подключаться к публичному Wi-Fi</li>
-      <li><strong>Урок 20</strong> — Мобильный интернет быстро заканчивается — как контролировать расход</li>
-    </ul>
+  <div class="col-block mint">
+    <h4>На Android</h4>
+    <ol>
+      <li>Настройки → Wi-Fi</li>
+      <li>Включи Wi-Fi переключателем</li>
+      <li>Выбери свою сеть из списка</li>
+      <li>Введи пароль → «Подключиться»</li>
+      <li>Надпись «Подключено» — готово</li>
+    </ol>
   </div>
-  <a class="back-btn" href="index.html">← Вернуться к списку блоков</a>
+</div>
+<div class="tip sky"><strong>Быстрый способ</strong>Смахни вниз с верхней части экрана — появится шторка уведомлений. Там есть иконка Wi-Fi. Нажми на неё, чтобы включить, или удерживай, чтобы выбрать сеть.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-mint">Урок 17</div>
+<h2>Wi-Fi не работает — простые шаги</h2>
+<p class="intro">Интернет пропал или не подключается? Не спеши звонить провайдеру — сначала пройди по этому списку.</p>
+<ul class="steps">
+  <li><span class="sn sky">1</span><span>Выключи Wi-Fi на телефоне и включи снова. Настройки → Wi-Fi → выключи переключатель, подожди 10 секунд, включи.</span></li>
+  <li><span class="sn mint">2</span><span>Перезагрузи роутер (белая или чёрная коробочка с антеннами). Выдерни провод питания, подожди 30 секунд, вставь обратно.</span></li>
+  <li><span class="sn rose">3</span><span>Перезагрузи телефон. Классика, которая работает.</span></li>
+  <li><span class="sn lilac">4</span><span>Забудь сеть и подключись заново: Настройки → Wi-Fi → нажми на свою сеть → «Забыть» → подключись снова с паролем.</span></li>
+  <li><span class="sn peach">5</span><span>Проверь другие устройства. Если планшет и ноутбук тоже без интернета — проблема в роутере или у провайдера. Звони провайдеру.</span></li>
+</ul>
+<table>
+  <thead><tr><th>Что видишь на экране</th><th>Что это значит</th><th>Что делать</th></tr></thead>
+  <tbody>
+    <tr><td>«Нет подключения к интернету»</td><td>Роутер работает, но нет выхода в сеть</td><td>Перезагрузи роутер или звони провайдеру</td></tr>
+    <tr><td>«Неверный пароль»</td><td>Пароль введён с ошибкой</td><td>Проверь регистр букв, смотри урок 18</td></tr>
+    <tr><td>«Получение адреса IP…» висит</td><td>Телефон не может договориться с роутером</td><td>Забудь сеть и подключись заново</td></tr>
+    <tr><td>Сеть вообще не видна в списке</td><td>Телефон далеко от роутера или роутер выключен</td><td>Подойди ближе или проверь роутер</td></tr>
+  </tbody>
+</table>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-lilac">Урок 18</div>
+<h2>Как узнать пароль от своего Wi-Fi</h2>
+<p class="intro">Забыла пароль от домашнего Wi-Fi? Бывает. Есть несколько способов его найти.</p>
+<div class="grid">
+  <div class="card sky"><h4>На наклейке роутера</h4><p>Переверни роутер. На дне или сзади есть наклейка — там написано «Password», «Key» или «Пароль».</p></div>
+  <div class="card mint"><h4>Через настройки роутера</h4><p>Открой браузер, введи 192.168.1.1. Войди (логин/пароль обычно admin/admin) → раздел Wi-Fi.</p></div>
+  <div class="card rose"><h4>С уже подключённого iPhone</h4><p>Настройки → Wi-Fi → нажми на название сети → «Пароль». Подтверди Face ID — пароль появится.</p></div>
+  <div class="card lav"><h4>С уже подключённого Android</h4><p>Настройки → Wi-Fi → нажми на сеть → «Поделиться» → появится QR-код и пароль под ним.</p></div>
+</div>
+<div class="tip mint"><strong>Совет инструктора</strong>Запиши пароль от домашнего Wi-Fi в заметки телефона или в блокнот. Лучше потратить минуту сейчас, чем искать его снова, когда придут гости.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-rose">Урок 19</div>
+<h2>Безопасно ли подключаться к публичному Wi-Fi</h2>
+<p class="intro">Wi-Fi в кафе, отеле, аэропорту — удобно, но не всегда безопасно. Разберёмся, чего избегать.</p>
+<table>
+  <thead><tr><th>Действие</th><th>В публичном Wi-Fi</th><th>Почему</th></tr></thead>
+  <tbody>
+    <tr><td>Читать новости, смотреть видео</td><td class="ok">Безопасно</td><td>Нет личных данных</td></tr>
+    <tr><td>Переписываться в Telegram / WhatsApp</td><td class="ok">Безопасно</td><td>Сообщения зашифрованы</td></tr>
+    <tr><td>Проверять почту</td><td class="mid">Осторожно</td><td>Не открывай вложения и ссылки</td></tr>
+    <tr><td>Входить в онлайн-банк</td><td class="no">Опасно</td><td>Мошенники могут перехватить данные</td></tr>
+    <tr><td>Вводить номер карты</td><td class="no">Опасно</td><td>Никогда не делай это в публичной сети</td></tr>
+    <tr><td>Подключаться к сети без пароля</td><td class="no">Очень опасно</td><td>Открытая сеть — лёгкая цель для хакеров</td></tr>
+  </tbody>
+</table>
+<div class="tip rose"><strong>Золотое правило публичного Wi-Fi</strong>Всё, что ты делаешь в открытой сети, теоретически может увидеть кто-то рядом. Банк, покупки, ввод паролей — только через мобильный интернет или дома.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-peach">Урок 20</div>
+<h2>Мобильный интернет быстро заканчивается — как контролировать</h2>
+<p class="intro">Трафик кончился раньше конца месяца? Это решаемо — нужно знать, кто его тратит и как поставить лимит.</p>
+<ul class="steps">
+  <li><span class="sn sky">1</span><span>Найди «пожирателей» трафика: Настройки → Сотовая связь (iPhone) или Настройки → Сеть → Использование данных (Android).</span></li>
+  <li><span class="sn mint">2</span><span>Запрети фоновое обновление прожорливым приложениям. iPhone: Настройки → Сотовая связь → найди приложение → выключи переключатель.</span></li>
+  <li><span class="sn rose">3</span><span>Включи «Режим экономии данных». iPhone: Настройки → Сотовая связь → Параметры сотовых данных → Режим экономии данных.</span></li>
+  <li><span class="sn lilac">4</span><span>Поставь лимит. Android: Настройки → Сеть → Использование данных → «Предупреждение и лимит данных» — введи свой месячный пакет.</span></li>
+  <li><span class="sn peach">5</span><span>Скачивай контент заранее по Wi-Fi: музыку в Spotify, карты в Google Maps, видео — и смотри офлайн.</span></li>
+</ul>
+<div class="tip peach"><strong>Главные потребители мобильного трафика</strong>Видео (TikTok, YouTube, Reels) — это 70–80% расхода у большинства пользователей. Смотри видео только по Wi-Fi — и трафик будет заканчиваться в последний день месяца, а не в первый.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-lav">Шпаргалка блока 4</div>
+<h2>Пять правил работы с интернетом</h2>
+<table>
+  <thead><tr><th>Правило</th><th>Как запомнить</th></tr></thead>
+  <tbody>
+    <tr><td>Не подключайся к банку через публичный Wi-Fi</td><td>«Банк — только дома»</td></tr>
+    <tr><td>Пароль от Wi-Fi запиши в надёжном месте</td><td>«Пароль — не в голове, а в блокноте»</td></tr>
+    <tr><td>Роутер завис — выключи и включи</td><td>«30 секунд без света всё решат»</td></tr>
+    <tr><td>Видео смотри только по Wi-Fi</td><td>«TikTok ест трафик как не в себя»</td></tr>
+    <tr><td>Открытая сеть без пароля — опасно</td><td>«Нет пароля — нет защиты»</td></tr>
+  </tbody>
+</table>
+
+<div class="final">
+  <h3>Блок 4 пройден!</h3>
+  <p>Теперь ты знаешь, как подключиться к Wi-Fi, найти пароль, решить проблемы с сетью и контролировать расход трафика.</p>
+</div>
 </div>
 </body>
 </html>

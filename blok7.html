@@ -6,40 +6,288 @@
 <title>Блок 7 — Компьютер и ноутбук</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:Georgia,serif;background:#FDF6EE;color:#3A2E28;line-height:1.7;}
+body{font-family:Georgia,serif;background:#F5F3FC;color:#1A1430;line-height:1.7;}
 .wrap{padding:2rem 1.5rem 4rem;max-width:720px;margin:0 auto;}
 .nav{margin-bottom:2rem;}
-.nav a{font-family:sans-serif;font-size:13px;color:#4A3870;text-decoration:none;background:rgba(0,0,0,0.06);padding:6px 16px;border-radius:20px;}
-.hero{border-radius:20px;padding:2.5rem 2rem;text-align:center;margin-bottom:2.5rem;background:#D8D0F0;}
+.nav a{font-family:sans-serif;font-size:13px;color:#4A3870;text-decoration:none;background:#D8D0F0;padding:6px 16px;border-radius:20px;}
+.hero{border-radius:20px;padding:2.5rem 2rem;text-align:center;margin-bottom:2.5rem;background:linear-gradient(135deg,#D8D0F0,#C8DFF5);}
 .hero-badge{display:inline-block;background:rgba(255,255,255,0.55);color:#4A3870;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:4px 16px;border-radius:20px;margin-bottom:1rem;font-family:sans-serif;font-weight:500;}
-.hero h1{font-size:24px;font-weight:normal;color:#1A1A28;margin-bottom:.5rem;}
-.hero p{font-size:14px;font-family:sans-serif;max-width:460px;margin:0 auto;line-height:1.6;color:#3A3A48;}
-.content-note{background:rgba(255,255,255,0.7);border-radius:16px;padding:2rem;font-family:sans-serif;font-size:15px;line-height:1.8;color:#3A2E28;margin:2rem 0;}
-.content-note h3{font-size:17px;font-weight:700;margin-bottom:1rem;color:#4A3870;}
-.content-note ul{padding-left:1.25rem;}
-.content-note li{margin-bottom:.6rem;}
-.back-btn{display:inline-block;margin-top:2rem;font-family:sans-serif;font-size:14px;color:#4A3870;text-decoration:none;background:#D8D0F0;padding:10px 24px;border-radius:20px;font-weight:600;}
+.hero h1{font-size:25px;font-weight:normal;color:#1A1430;margin-bottom:.5rem;}
+.hero p{font-size:14px;color:#3A2A60;font-family:sans-serif;max-width:460px;margin:0 auto;line-height:1.6;}
+.lbl{display:inline-block;font-size:11px;font-family:sans-serif;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:3px 14px;border-radius:20px;margin-bottom:.6rem;}
+.lbl-lav{background:#D8D0F0;color:#4A3870;}
+.lbl-sky{background:#C8DFF5;color:#1A4A7A;}
+.lbl-mint{background:#C8EBE0;color:#1F6B50;}
+.lbl-rose{background:#F9C6D0;color:#7A3045;}
+.lbl-peach{background:#FDDEC8;color:#7A3D10;}
+.lbl-lilac{background:#EDD8F5;color:#5C2070;}
+h2{font-size:21px;font-weight:normal;margin-bottom:.3rem;}
+h3{font-size:16px;font-weight:normal;font-style:italic;margin:1.4rem 0 .5rem;}
+.intro{font-size:14px;color:#5A5080;font-family:sans-serif;margin-bottom:1.25rem;line-height:1.65;}
+.divider{height:1px;background:#D8D0F0;margin:2.5rem 0;}
+.tip{border-left:3px solid;padding:1rem 1.15rem;margin:1.1rem 0;font-family:sans-serif;font-size:13.5px;line-height:1.6;}
+.tip strong{display:block;font-size:11px;font-weight:700;margin-bottom:4px;letter-spacing:.06em;text-transform:uppercase;}
+.tip.lav{background:#F0EDFC;border-color:#9B8EC4;color:#4A3870;}
+.tip.sky{background:#EEF5FD;border-color:#7AAAD8;color:#1A4A7A;}
+.tip.mint{background:#EDF7F3;border-color:#6DBFA0;color:#1F6B50;}
+.tip.rose{background:#FEF0F3;border-color:#C47A8A;color:#7A3045;}
+.tip.peach{background:#FEF5EE;border-color:#E8A47A;color:#7A3D10;}
+table{width:100%;border-collapse:collapse;font-family:sans-serif;font-size:13px;margin:1.1rem 0 1.6rem;}
+thead tr{background:#D8D0F0;}
+thead th{padding:9px 13px;text-align:left;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#4A3870;}
+tbody tr:nth-child(odd){background:#F8F6FD;}
+tbody tr:nth-child(even){background:#EDE8F8;}
+tbody td{padding:9px 13px;border-bottom:.5px solid #D8D0F0;vertical-align:top;}
+.ok{color:#1F6B50;font-weight:500;}
+.no{color:#7A3045;font-weight:500;}
+.mid{color:#7A3D10;font-weight:500;}
+.steps{list-style:none;margin:1rem 0 1.5rem;}
+.steps li{display:flex;gap:13px;align-items:flex-start;margin-bottom:11px;font-family:sans-serif;font-size:13.5px;line-height:1.55;}
+.sn{min-width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;margin-top:1px;}
+.sn.lav{background:#D8D0F0;color:#4A3870;}
+.sn.sky{background:#C8DFF5;color:#1A4A7A;}
+.sn.mint{background:#C8EBE0;color:#1F6B50;}
+.sn.rose{background:#F9C6D0;color:#7A3045;}
+.sn.peach{background:#FDDEC8;color:#7A3D10;}
+.sn.lilac{background:#EDD8F5;color:#5C2070;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:11px;margin:1.1rem 0 1.6rem;}
+.card{border-radius:14px;padding:1rem;font-family:sans-serif;}
+.card h4{font-size:13px;font-weight:700;margin-bottom:5px;}
+.card p{font-size:12.5px;line-height:1.5;}
+.card.lav{background:#F0EDFC;color:#4A3870;}
+.card.sky{background:#EEF5FD;color:#1A4A7A;}
+.card.mint{background:#EDF7F3;color:#1F6B50;}
+.card.rose{background:#FEF0F3;color:#7A3045;}
+.card.peach{background:#FEF5EE;color:#7A3D10;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0 1.6rem;}
+.col-block{border-radius:14px;padding:1.1rem;font-family:sans-serif;}
+.col-block h4{font-size:13px;font-weight:700;margin-bottom:8px;}
+.col-block ul,.col-block ol{font-size:12.5px;line-height:1.8;padding-left:1.1rem;}
+.col-block.lav{background:#F0EDFC;color:#4A3870;}
+.col-block.sky{background:#EEF5FD;color:#1A4A7A;}
+.col-block.mint{background:#EDF7F3;color:#1F6B50;}
+.col-block.rose{background:#FEF0F3;color:#7A3045;}
+.shortcut-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:.5px solid #D8D0F0;font-family:sans-serif;font-size:13.5px;}
+.shortcut-row:last-child{border-bottom:none;}
+.key{display:inline-block;background:#D8D0F0;color:#4A3870;border-radius:6px;padding:2px 9px;font-size:12px;font-weight:700;font-family:monospace;white-space:nowrap;}
+.key-sep{color:#9B8EC4;font-weight:700;font-size:13px;}
+.final{border-radius:18px;padding:2rem;text-align:center;margin-top:2.5rem;background:linear-gradient(135deg,#D8D0F0,#C8DFF5);}
+.final h3{font-style:normal;font-size:18px;margin-bottom:.5rem;color:#1A1430;}
+.final p{font-size:14px;color:#3A2A60;font-family:sans-serif;line-height:1.6;}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="nav"><a href="index.html">← На главную</a></div>
-  <div class="hero">
-    <div class="hero-badge">Блок 7 · Компьютер и ноутбук</div>
-    <h1>Компьютер — не страшно.<br>Просто другой экран.</h1>
-    <p>Правильное выключение, скриншоты, передача файлов, флешки и обновления.</p>
+<div class="nav"><a href="index.html">← На главную</a></div>
+<div class="hero">
+  <div class="hero-badge">Блок 7 · Компьютер и ноутбук</div>
+  <h1>Компьютер — не страшно.<br>Просто другой экран.</h1>
+  <p>Разбираем базовые операции: как правильно выключать, делать скриншоты, передавать файлы и безопасно вытаскивать флешку.</p>
+</div>
+
+<div class="lbl lbl-lav">Урок 31</div>
+<h2>Как правильно выключать компьютер</h2>
+<p class="intro">Просто закрыть крышку ноутбука — это не выключить. Компьютер продолжает работать в режиме сна, тратит заряд и не завершает обновления.</p>
+<div class="two-col">
+  <div class="col-block lav">
+    <h4>Windows — выключение</h4>
+    <ol>
+      <li>Нажми кнопку «Пуск» (флажок Windows слева внизу)</li>
+      <li>Нажми на иконку питания</li>
+      <li>Выбери «Завершение работы»</li>
+      <li>Подожди, пока экран погаснет полностью</li>
+    </ol>
   </div>
-  <div class="content-note">
-    <h3>Уроки этого блока:</h3>
+  <div class="col-block sky">
+    <h4>Mac — выключение</h4>
+    <ol>
+      <li>Нажми на яблоко 🍎 в левом верхнем углу</li>
+      <li>Выбери «Выключить…»</li>
+      <li>Подтверди «Выключить» в диалоге</li>
+      <li>Подожди, пока экран погаснет полностью</li>
+    </ol>
+  </div>
+</div>
+<table>
+  <thead><tr><th>Действие</th><th>Что происходит</th><th>Когда использовать</th></tr></thead>
+  <tbody>
+    <tr><td>Завершение работы (Выключить)</td><td>Компьютер полностью выключается</td><td>На ночь, надолго, перед дорогой</td></tr>
+    <tr><td>Перезагрузка</td><td>Выключается и сразу включается</td><td>После обновлений, если что-то глючит</td></tr>
+    <tr><td>Сон / Спящий режим</td><td>Всё сохраняется, экран гаснет</td><td>Когда уходишь на 30–60 минут</td></tr>
+    <tr><td>Закрыть крышку (ноутбук)</td><td>Чаще всего — режим сна, не выключение</td><td>Только если уходишь ненадолго</td></tr>
+    <tr><td>Удерживать кнопку питания 5 сек</td><td>Принудительное выключение</td><td>Только если компьютер завис и не реагирует</td></tr>
+  </tbody>
+</table>
+<div class="tip lav"><strong>Почему важно выключать правильно</strong>При правильном выключении компьютер сохраняет все файлы, завершает обновления и очищает временные данные. Принудительное выключение кнопкой питания может повредить файлы.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-sky">Урок 32</div>
+<h2>Как сделать скриншот</h2>
+<p class="intro">Скриншот — это фотография экрана. Незаменимая вещь: сохранить переписку, показать ошибку, поделиться информацией.</p>
+<h3>На телефоне</h3>
+<div class="grid">
+  <div class="card lav"><h4>iPhone с Face ID</h4><p>Одновременно нажми кнопку сбоку + кнопку громкости вверх. Экран мигнёт — скриншот в галерее.</p></div>
+  <div class="card sky"><h4>iPhone с кнопкой Home</h4><p>Одновременно нажми кнопку сбоку + кнопку Home (круглая снизу). Экран мигнёт.</p></div>
+  <div class="card mint"><h4>Android (большинство)</h4><p>Одновременно нажми кнопку питания + кнопку уменьшения громкости. Держи 1–2 секунды.</p></div>
+  <div class="card rose"><h4>Android — жест</h4><p>На многих Samsung и Xiaomi: проведи ребром ладони по экрану справа налево.</p></div>
+</div>
+<h3>На компьютере</h3>
+<div class="two-col">
+  <div class="col-block lav">
+    <h4>Windows</h4>
     <ul>
-      <li><strong>Урок 31</strong> — Как правильно выключать компьютер (не просто закрыть крышку)</li>
-      <li><strong>Урок 32</strong> — Как сделать скриншот на телефоне и компьютере</li>
-      <li><strong>Урок 33</strong> — Как подключить телефон к компьютеру и передать файлы</li>
-      <li><strong>Урок 34</strong> — Как безопасно «вытащить» флешку из компьютера</li>
-      <li><strong>Урок 35</strong> — Как обновить систему на телефоне и компьютере и зачем это нужно</li>
+      <li><strong>Весь экран:</strong> клавиша Print Screen (PrtScn)</li>
+      <li><strong>Активное окно:</strong> Alt + PrtScn</li>
+      <li><strong>Выделить область:</strong> Win + Shift + S</li>
+      <li><strong>Сохранить сразу в файл:</strong> Win + PrtScn → папка «Снимки экрана»</li>
     </ul>
   </div>
-  <a class="back-btn" href="index.html">← Вернуться к списку блоков</a>
+  <div class="col-block sky">
+    <h4>Mac</h4>
+    <ul>
+      <li><strong>Весь экран:</strong> Cmd + Shift + 3</li>
+      <li><strong>Выделить область:</strong> Cmd + Shift + 4</li>
+      <li><strong>Активное окно:</strong> Cmd + Shift + 4, затем Пробел + клик</li>
+      <li><strong>В буфер:</strong> добавь Control к любой комбинации</li>
+    </ul>
+  </div>
+</div>
+<div class="tip sky"><strong>Самый простой способ на Windows</strong>Win + Shift + S — появится тёмный экран с прицелом. Выдели нужную область мышью. Скриншот скопируется в буфер — вставь его в чат или письмо через Ctrl + V.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-mint">Урок 33</div>
+<h2>Как подключить телефон к компьютеру и передать файлы</h2>
+<p class="intro">Нужно перенести фото на компьютер или скачать документ на телефон? Кабель — самый надёжный способ.</p>
+<h3>iPhone → Mac</h3>
+<ul class="steps">
+  <li><span class="sn lav">1</span><span>Подключи iPhone к Mac кабелем Lightning или USB-C.</span></li>
+  <li><span class="sn sky">2</span><span>На iPhone появится запрос «Доверять этому компьютеру?» — нажми «Доверять» и введи код разблокировки.</span></li>
+  <li><span class="sn mint">3</span><span>На Mac откроется приложение «Фото» — нажми «Импортировать все новые объекты» или выбери нужные фото вручную.</span></li>
+  <li><span class="sn rose">4</span><span>Для файлов: используй Finder → слева найди свой iPhone → папка «Файлы».</span></li>
+</ul>
+<h3>iPhone → Windows</h3>
+<ul class="steps">
+  <li><span class="sn lav">1</span><span>Подключи iPhone кабелем, нажми «Доверять» на телефоне.</span></li>
+  <li><span class="sn sky">2</span><span>Открой «Этот компьютер» (Win + E).</span></li>
+  <li><span class="sn mint">3</span><span>Найди свой iPhone в списке устройств → Internal Storage → DCIM → здесь все фото.</span></li>
+  <li><span class="sn rose">4</span><span>Скопируй нужные фото: правая кнопка мыши → «Копировать» → вставь в нужную папку.</span></li>
+</ul>
+<h3>Android → Windows или Mac</h3>
+<ul class="steps">
+  <li><span class="sn lav">1</span><span>Подключи кабель USB. На телефоне появится уведомление о подключении — нажми на него.</span></li>
+  <li><span class="sn sky">2</span><span>Выбери «Передача файлов» (File Transfer / MTP) — не «Зарядка».</span></li>
+  <li><span class="sn mint">3</span><span>На компьютере открой «Этот компьютер» → зайди в папку DCIM для фото.</span></li>
+  <li><span class="sn rose">4</span><span>Перетащи нужные файлы на компьютер или скопируй через правую кнопку мыши.</span></li>
+</ul>
+<div class="tip mint"><strong>Альтернатива без кабеля</strong>Загрузи файлы в Google Диск или iCloud с телефона — и скачай на компьютере через браузер. Работает через Wi-Fi, кабель не нужен.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-rose">Урок 34</div>
+<h2>Как безопасно «вытащить» флешку</h2>
+<p class="intro">Флешку нельзя просто выдернуть из компьютера — это может повредить файлы. Нужно сначала «отключить» её правильно. Это занимает 5 секунд.</p>
+<div class="two-col">
+  <div class="col-block lav">
+    <h4>На Windows</h4>
+    <ol>
+      <li>Найди иконку флешки в правом нижнем углу экрана</li>
+      <li>Кликни на неё правой кнопкой мыши</li>
+      <li>Выбери «Извлечь [название флешки]»</li>
+      <li>Появится надпись «Теперь устройство можно безопасно извлечь»</li>
+      <li>Только теперь вытаскивай флешку</li>
+    </ol>
+  </div>
+  <div class="col-block sky">
+    <h4>На Mac</h4>
+    <ol>
+      <li>Найди флешку на рабочем столе или в Finder</li>
+      <li>Нажми на иконку ⏏ рядом с названием флешки в Finder</li>
+      <li>Или перетащи иконку флешки в Корзину (она превратится в ⏏)</li>
+      <li>Иконка исчезнет — теперь можно вытаскивать</li>
+    </ol>
+  </div>
+</div>
+<table>
+  <thead><tr><th>Что будет если выдернуть без извлечения</th><th>Насколько серьёзно</th></tr></thead>
+  <tbody>
+    <tr><td>Файл, который копировался, повредится</td><td class="no">Серьёзно — файл может не открыться</td></tr>
+    <tr><td>Флешка может «слететь» и потребовать форматирования</td><td class="no">Серьёзно — все данные удалятся</td></tr>
+    <tr><td>Если ничего не копировалось в момент извлечения</td><td class="mid">Чаще всего ничего не случится, но риск есть</td></tr>
+  </tbody>
+</table>
+<div class="tip rose"><strong>Запомни как правило</strong>Флешка — как посуда в посудомойке: сначала дождись конца цикла, потом вынимай. Не раньше.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-peach">Урок 35</div>
+<h2>Как обновить систему и зачем это нужно</h2>
+<p class="intro">Обновления системы — это не просто новые иконки. Это заплатки безопасности, исправление ошибок и улучшение скорости.</p>
+<div class="grid">
+  <div class="card lav"><h4>Защита от вирусов</h4><p>Хакеры находят дыры в старых версиях. Обновления их закрывают раньше, чем ими успевают воспользоваться.</p></div>
+  <div class="card sky"><h4>Стабильность работы</h4><p>Зависания, вылеты приложений, глюки — всё это часто исправляется в очередном обновлении.</p></div>
+  <div class="card mint"><h4>Совместимость</h4><p>Новые приложения рассчитаны на актуальные версии системы. Старая система = приложения могут не работать.</p></div>
+  <div class="card rose"><h4>Новые функции</h4><p>Улучшенная камера, новые эмодзи, быстрый поиск — всё это приходит с обновлениями.</p></div>
+</div>
+<h3>Как обновить систему на телефоне</h3>
+<ul class="steps">
+  <li><span class="sn lav">1</span><span><strong>iPhone:</strong> Настройки → Основные → Обновление ПО. Телефон должен быть заряжен хотя бы на 50% и подключён к Wi-Fi.</span></li>
+  <li><span class="sn sky">2</span><span><strong>Android:</strong> Настройки → Система → Обновление системы → «Проверить наличие обновлений».</span></li>
+  <li><span class="sn mint">3</span><span>Лучше обновлять вечером — телефон перезагрузится и может быть недоступен 10–20 минут.</span></li>
+</ul>
+<h3>Как обновить систему на компьютере</h3>
+<ul class="steps">
+  <li><span class="sn rose">1</span><span><strong>Windows:</strong> Пуск → Настройки → Обновление и безопасность → Windows Update → «Проверить наличие обновлений».</span></li>
+  <li><span class="sn peach">2</span><span><strong>Mac:</strong> Яблоко 🍎 → Системные настройки → Основные → Обновление ПО.</span></li>
+  <li><span class="sn lilac">3</span><span>Перед большим обновлением компьютера — сохрани важные файлы на флешку или в облако. На всякий случай.</span></li>
+</ul>
+<div class="tip peach"><strong>Если компьютер давно не обновлялся</strong>Не пугайся, если обновлений накопилось много — это нормально. Просто запусти проверку, подключись к Wi-Fi, оставь компьютер включённым и уйди заниматься своими делами. Он всё сделает сам.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-lilac">Шпаргалка — горячие клавиши</div>
+<h2>Комбинации, которые спасут жизнь</h2>
+<div class="two-col">
+  <div class="col-block lav">
+    <h4>Windows</h4>
+    <div class="shortcut-row"><span class="key">Ctrl</span><span class="key-sep">+</span><span class="key">C</span><span>Копировать</span></div>
+    <div class="shortcut-row"><span class="key">Ctrl</span><span class="key-sep">+</span><span class="key">V</span><span>Вставить</span></div>
+    <div class="shortcut-row"><span class="key">Ctrl</span><span class="key-sep">+</span><span class="key">Z</span><span>Отменить последнее действие</span></div>
+    <div class="shortcut-row"><span class="key">Ctrl</span><span class="key-sep">+</span><span class="key">S</span><span>Сохранить файл</span></div>
+    <div class="shortcut-row"><span class="key">Ctrl</span><span class="key-sep">+</span><span class="key">A</span><span>Выделить всё</span></div>
+    <div class="shortcut-row"><span class="key">Win</span><span class="key-sep">+</span><span class="key">L</span><span>Заблокировать экран</span></div>
+    <div class="shortcut-row"><span class="key">Alt</span><span class="key-sep">+</span><span class="key">F4</span><span>Закрыть программу</span></div>
+    <div class="shortcut-row"><span class="key">Win</span><span class="key-sep">+</span><span class="key">Shift</span><span class="key-sep">+</span><span class="key">S</span><span>Скриншот области</span></div>
+  </div>
+  <div class="col-block sky">
+    <h4>Mac</h4>
+    <div class="shortcut-row"><span class="key">Cmd</span><span class="key-sep">+</span><span class="key">C</span><span>Копировать</span></div>
+    <div class="shortcut-row"><span class="key">Cmd</span><span class="key-sep">+</span><span class="key">V</span><span>Вставить</span></div>
+    <div class="shortcut-row"><span class="key">Cmd</span><span class="key-sep">+</span><span class="key">Z</span><span>Отменить последнее действие</span></div>
+    <div class="shortcut-row"><span class="key">Cmd</span><span class="key-sep">+</span><span class="key">S</span><span>Сохранить файл</span></div>
+    <div class="shortcut-row"><span class="key">Cmd</span><span class="key-sep">+</span><span class="key">A</span><span>Выделить всё</span></div>
+    <div class="shortcut-row"><span class="key">Cmd</span><span class="key-sep">+</span><span class="key">Space</span><span>Поиск Spotlight</span></div>
+    <div class="shortcut-row"><span class="key">Cmd</span><span class="key-sep">+</span><span class="key">Q</span><span>Закрыть программу</span></div>
+    <div class="shortcut-row"><span class="key">Cmd</span><span class="key-sep">+</span><span class="key">Shift</span><span class="key-sep">+</span><span class="key">4</span><span>Скриншот области</span></div>
+  </div>
+</div>
+
+<table>
+  <thead><tr><th>Правило</th><th>Как запомнить</th></tr></thead>
+  <tbody>
+    <tr><td>Выключай через меню, не кнопкой питания</td><td>«Правильный выход — через дверь, не в окно»</td></tr>
+    <tr><td>Win + Shift + S — твой друг для скриншотов</td><td>«Три кнопки — и экран в кармане»</td></tr>
+    <tr><td>Перед извлечением флешки — нажми «Извлечь»</td><td>«Сначала попрощайся, потом уходи»</td></tr>
+    <tr><td>Ctrl + Z спасёт от любой ошибки</td><td>«Нажала не то — Ctrl + Z всё вернёт»</td></tr>
+    <tr><td>Обновляй систему регулярно</td><td>«Витамины для компьютера — раз в месяц»</td></tr>
+  </tbody>
+</table>
+
+<div class="final">
+  <h3>Блок 7 пройден!</h3>
+  <p>Теперь ты знаешь, как правильно работать с компьютером: выключать, делать скриншоты, передавать файлы и не бояться обновлений.</p>
+</div>
 </div>
 </body>
 </html>

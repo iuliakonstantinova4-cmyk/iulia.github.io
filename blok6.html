@@ -6,40 +6,239 @@
 <title>Блок 6 — Аккаунты и соцсети</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:Georgia,serif;background:#FDF6EE;color:#3A2E28;line-height:1.7;}
+body{font-family:Georgia,serif;background:#FFF5F8;color:#3A1A28;line-height:1.7;}
 .wrap{padding:2rem 1.5rem 4rem;max-width:720px;margin:0 auto;}
 .nav{margin-bottom:2rem;}
-.nav a{font-family:sans-serif;font-size:13px;color:#7A3045;text-decoration:none;background:rgba(0,0,0,0.06);padding:6px 16px;border-radius:20px;}
-.hero{border-radius:20px;padding:2.5rem 2rem;text-align:center;margin-bottom:2.5rem;background:#F9C6D0;}
+.nav a{font-family:sans-serif;font-size:13px;color:#7A3045;text-decoration:none;background:#F9C6D0;padding:6px 16px;border-radius:20px;}
+.hero{border-radius:20px;padding:2.5rem 2rem;text-align:center;margin-bottom:2.5rem;background:linear-gradient(135deg,#FDDEC8,#F9C6D0);}
 .hero-badge{display:inline-block;background:rgba(255,255,255,0.55);color:#7A3045;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:4px 16px;border-radius:20px;margin-bottom:1rem;font-family:sans-serif;font-weight:500;}
-.hero h1{font-size:24px;font-weight:normal;color:#1A1A28;margin-bottom:.5rem;}
-.hero p{font-size:14px;font-family:sans-serif;max-width:460px;margin:0 auto;line-height:1.6;color:#3A3A48;}
-.content-note{background:rgba(255,255,255,0.7);border-radius:16px;padding:2rem;font-family:sans-serif;font-size:15px;line-height:1.8;color:#3A2E28;margin:2rem 0;}
-.content-note h3{font-size:17px;font-weight:700;margin-bottom:1rem;color:#7A3045;}
-.content-note ul{padding-left:1.25rem;}
-.content-note li{margin-bottom:.6rem;}
-.back-btn{display:inline-block;margin-top:2rem;font-family:sans-serif;font-size:14px;color:#7A3045;text-decoration:none;background:#F9C6D0;padding:10px 24px;border-radius:20px;font-weight:600;}
+.hero h1{font-size:25px;font-weight:normal;color:#2A0E18;margin-bottom:.5rem;}
+.hero p{font-size:14px;color:#5A2A38;font-family:sans-serif;max-width:460px;margin:0 auto;line-height:1.6;}
+.lbl{display:inline-block;font-size:11px;font-family:sans-serif;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:3px 14px;border-radius:20px;margin-bottom:.6rem;}
+.lbl-peach{background:#FDDEC8;color:#7A3D10;}
+.lbl-rose{background:#F9C6D0;color:#7A3045;}
+.lbl-mint{background:#C8EBE0;color:#1F6B50;}
+.lbl-sky{background:#C8DFF5;color:#1A4A7A;}
+.lbl-lilac{background:#EDD8F5;color:#5C2070;}
+.lbl-lav{background:#D8D0F0;color:#4A3870;}
+h2{font-size:21px;font-weight:normal;margin-bottom:.3rem;}
+h3{font-size:16px;font-weight:normal;font-style:italic;margin:1.4rem 0 .5rem;}
+.intro{font-size:14px;color:#7A5A68;font-family:sans-serif;margin-bottom:1.25rem;line-height:1.65;}
+.divider{height:1px;background:#F9C6D0;margin:2.5rem 0;}
+.tip{border-left:3px solid;padding:1rem 1.15rem;margin:1.1rem 0;font-family:sans-serif;font-size:13.5px;line-height:1.6;}
+.tip strong{display:block;font-size:11px;font-weight:700;margin-bottom:4px;letter-spacing:.06em;text-transform:uppercase;}
+.tip.peach{background:#FEF5EE;border-color:#E8A47A;color:#7A3D10;}
+.tip.rose{background:#FEF0F3;border-color:#C47A8A;color:#7A3045;}
+.tip.mint{background:#EDF7F3;border-color:#6DBFA0;color:#1F6B50;}
+.tip.sky{background:#EEF5FD;border-color:#7AAAD8;color:#1A4A7A;}
+.tip.lilac{background:#F7EEFE;border-color:#B87FD0;color:#5C2070;}
+table{width:100%;border-collapse:collapse;font-family:sans-serif;font-size:13px;margin:1.1rem 0 1.6rem;}
+thead tr{background:#F9C6D0;}
+thead th{padding:9px 13px;text-align:left;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#7A3045;}
+tbody tr:nth-child(odd){background:#FFF8FA;}
+tbody tr:nth-child(even){background:#FFECF0;}
+tbody td{padding:9px 13px;border-bottom:.5px solid #F9C6D0;vertical-align:top;}
+.ok{color:#1F6B50;font-weight:500;}
+.no{color:#7A3045;font-weight:500;}
+.mid{color:#7A3D10;font-weight:500;}
+.steps{list-style:none;margin:1rem 0 1.5rem;}
+.steps li{display:flex;gap:13px;align-items:flex-start;margin-bottom:11px;font-family:sans-serif;font-size:13.5px;line-height:1.55;}
+.sn{min-width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;margin-top:1px;}
+.sn.peach{background:#FDDEC8;color:#7A3D10;}
+.sn.rose{background:#F9C6D0;color:#7A3045;}
+.sn.mint{background:#C8EBE0;color:#1F6B50;}
+.sn.sky{background:#C8DFF5;color:#1A4A7A;}
+.sn.lilac{background:#EDD8F5;color:#5C2070;}
+.sn.lav{background:#D8D0F0;color:#4A3870;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:11px;margin:1.1rem 0 1.6rem;}
+.card{border-radius:14px;padding:1rem;font-family:sans-serif;}
+.card h4{font-size:13px;font-weight:700;margin-bottom:5px;}
+.card p{font-size:12.5px;line-height:1.5;}
+.card.peach{background:#FEF5EE;color:#7A3D10;}
+.card.rose{background:#FEF0F3;color:#7A3045;}
+.card.mint{background:#EDF7F3;color:#1F6B50;}
+.card.sky{background:#EEF5FD;color:#1A4A7A;}
+.card.lilac{background:#F7EEFE;color:#5C2070;}
+.card.lav{background:#F0EDFC;color:#4A3870;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0 1.6rem;}
+.col-block{border-radius:14px;padding:1.1rem;font-family:sans-serif;}
+.col-block h4{font-size:13px;font-weight:700;margin-bottom:8px;}
+.col-block ul,.col-block ol{font-size:12.5px;line-height:1.8;padding-left:1.1rem;}
+.col-block.peach{background:#FEF5EE;color:#7A3D10;}
+.col-block.rose{background:#FEF0F3;color:#7A3045;}
+.col-block.mint{background:#EDF7F3;color:#1F6B50;}
+.col-block.sky{background:#EEF5FD;color:#1A4A7A;}
+.final{border-radius:18px;padding:2rem;text-align:center;margin-top:2.5rem;background:linear-gradient(135deg,#FDDEC8,#F9C6D0);}
+.final h3{font-style:normal;font-size:18px;margin-bottom:.5rem;color:#2A0E18;}
+.final p{font-size:14px;color:#5A2A38;font-family:sans-serif;line-height:1.6;}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="nav"><a href="index.html">← На главную</a></div>
-  <div class="hero">
-    <div class="hero-badge">Блок 6 · Аккаунты и соцсети</div>
-    <h1>Почта, соцсети, уведомления —<br>всё настроено.</h1>
-    <p>Создаём аккаунты, восстанавливаем пароли, настраиваем приватность.</p>
+<div class="nav"><a href="index.html">← На главную</a></div>
+<div class="hero">
+  <div class="hero-badge">Блок 6 · Аккаунты и соцсети</div>
+  <h1>Почта, соцсети, уведомления —<br>всё настроено и под защитой.</h1>
+  <p>Создаём аккаунты, восстанавливаем пароли, настраиваем приватность и учимся выходить из аккаунта удалённо.</p>
+</div>
+
+<div class="lbl lbl-peach">Урок 26</div>
+<h2>Как создать почту Gmail с нуля</h2>
+<p class="intro">Gmail — это почта от Google. Она нужна не только для писем: без неё не установить приложения на Android, не войти в YouTube и Google Фото.</p>
+<ul class="steps">
+  <li><span class="sn peach">1</span><span>Открой браузер и введи в адресной строке <strong>gmail.com</strong>.</span></li>
+  <li><span class="sn rose">2</span><span>Нажми «Создать аккаунт» → «Для себя».</span></li>
+  <li><span class="sn mint">3</span><span>Введи имя и фамилию.</span></li>
+  <li><span class="sn sky">4</span><span>Придумай адрес почты — это будет твой логин: например, <em>mariya.flowers</em> или <em>masha.italy2024</em>.</span></li>
+  <li><span class="sn lilac">5</span><span>Придумай пароль — минимум 12 символов. Запиши его в надёжном месте прямо сейчас.</span></li>
+  <li><span class="sn lav">6</span><span>Подтверди номер телефона — Google пришлёт SMS с кодом.</span></li>
+  <li><span class="sn peach">7</span><span>Заполни дату рождения → «Далее» → прими условия → аккаунт готов!</span></li>
+</ul>
+<div class="tip peach"><strong>Запиши сразу в одном месте</strong>Адрес почты (логин) и пароль — запиши в блокнот или в заметки телефона. Без этих данных восстановить доступ можно, но долго и сложно.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-rose">Урок 27</div>
+<h2>Как восстановить забытый пароль</h2>
+<p class="intro">Забыла пароль — не трагедия. У каждого сервиса есть способ восстановить доступ. Главное — знать, к какому телефону или почте был привязан аккаунт.</p>
+<div class="grid">
+  <div class="card peach"><h4>Gmail / Google</h4><p>gmail.com → «Забыли пароль?» → введи почту → выбери способ: SMS на телефон или письмо на запасную почту.</p></div>
+  <div class="card rose"><h4>Instagram</h4><p>Экран входа → «Забыли пароль?» → введи почту или телефон → получи ссылку для сброса.</p></div>
+  <div class="card mint"><h4>Apple ID (iPhone)</h4><p>iforgot.apple.com → введи Apple ID → подтверди через доверенное устройство или номер.</p></div>
+  <div class="card sky"><h4>Telegram</h4><p>При входе Telegram отправит код на твой номер телефона автоматически.</p></div>
+  <div class="card lilac"><h4>WhatsApp</h4><p>WhatsApp привязан к номеру телефона. Просто установи заново и введи номер — придёт SMS с кодом.</p></div>
+  <div class="card lav"><h4>Любой сайт</h4><p>Ищи кнопку «Забыли пароль?» или «Восстановить доступ» — она есть везде.</p></div>
+</div>
+<table>
+  <thead><tr><th>Ситуация</th><th>Что нужно для восстановления</th><th>Где это взять</th></tr></thead>
+  <tbody>
+    <tr><td>Есть доступ к телефону</td><td class="ok">SMS с кодом</td><td>Приходит автоматически</td></tr>
+    <tr><td>Есть доступ к запасной почте</td><td class="ok">Письмо со ссылкой</td><td>Приходит на почту</td></tr>
+    <tr><td>Нет ни телефона, ни почты</td><td class="mid">Подтверждение личности</td><td>Через службу поддержки сервиса — долго</td></tr>
+  </tbody>
+</table>
+<div class="tip rose"><strong>Совет инструктора</strong>При создании любого аккаунта указывай запасную почту и реальный номер телефона. Это единственный надёжный способ восстановить доступ, если забудешь пароль.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-mint">Урок 28</div>
+<h2>Как настроить уведомления</h2>
+<p class="intro">Телефон пищит каждые 5 минут — и от этого хочется его выключить. Настрой уведомления так, чтобы тебя беспокоило только важное.</p>
+<ul class="steps">
+  <li><span class="sn peach">1</span><span>На iPhone: Настройки → Уведомления. Нажми на любое приложение и настрой: включить/выключить, показывать на экране блокировки, звук, значок.</span></li>
+  <li><span class="sn rose">2</span><span>На Android: Настройки → Уведомления → Управление уведомлениями приложений.</span></li>
+  <li><span class="sn mint">3</span><span>Включи режим «Не беспокоить» на ночь. iPhone: Настройки → Фокусировка → Не беспокоить → расписание.</span></li>
+</ul>
+<table>
+  <thead><tr><th>Приложение</th><th>Рекомендация</th><th>Почему</th></tr></thead>
+  <tbody>
+    <tr><td>Телефон и SMS</td><td class="ok">Включить всё</td><td>Звонки и важные сообщения нельзя пропускать</td></tr>
+    <tr><td>Мессенджеры (WhatsApp, Telegram)</td><td class="ok">Включить звук</td><td>Важные сообщения от близких</td></tr>
+    <tr><td>Почта</td><td class="mid">Только значок, без звука</td><td>Почта не требует мгновенного ответа</td></tr>
+    <tr><td>Соцсети (Instagram, TikTok)</td><td class="mid">Только важные (упоминания, сообщения)</td><td>Лайки и подписчики отвлекают и не срочны</td></tr>
+    <tr><td>Новости и игры</td><td class="no">Выключить</td><td>Рекламные уведомления — чистый шум</td></tr>
+    <tr><td>Банк</td><td class="ok">Включить всё</td><td>Операции по карте нужно контролировать</td></tr>
+  </tbody>
+</table>
+<div class="tip mint"><strong>Лайфхак — «Не беспокоить» с исключениями</strong>Можно включить «Не беспокоить» и при этом разрешить звонки от избранных контактов. iPhone: Фокусировка → Не беспокоить → Разрешённые люди. Так ночью тебя не разбудит Instagram, но позвонить в экстренном случае смогут.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-sky">Урок 29</div>
+<h2>Как настроить приватность в соцсетях</h2>
+<p class="intro">Приватность — это контроль над тем, кто может видеть твои фото, истории и личные данные.</p>
+<h3>Instagram — основные настройки</h3>
+<ul class="steps">
+  <li><span class="sn peach">1</span><span><strong>Закрытый аккаунт:</strong> Настройки → Конфиденциальность → Приватность аккаунта → включи «Закрытый аккаунт».</span></li>
+  <li><span class="sn rose">2</span><span><strong>Кто может писать в Директ:</strong> Настройки → Конфиденциальность → Сообщения → «Только люди, на которых я подписана».</span></li>
+  <li><span class="sn mint">3</span><span><strong>Скрыть онлайн-статус:</strong> Настройки → Конфиденциальность → Статус активности → выключи.</span></li>
+</ul>
+<h3>WhatsApp — основные настройки</h3>
+<ul class="steps">
+  <li><span class="sn sky">1</span><span>Настройки → Конфиденциальность → «Последнее посещение» → «Мои контакты» или «Никто».</span></li>
+  <li><span class="sn lilac">2</span><span>«Фото профиля», «О себе», «Статус» — для каждого выбери «Мои контакты».</span></li>
+  <li><span class="sn lav">3</span><span>«Прочитано» (галочки) → можно выключить, тогда отправитель не увидит, читала ли ты.</span></li>
+</ul>
+<h3>Telegram — основные настройки</h3>
+<ul class="steps">
+  <li><span class="sn peach">1</span><span>Настройки → Конфиденциальность → Номер телефона → «Никто».</span></li>
+  <li><span class="sn rose">2</span><span>«Последняя активность» → «Мои контакты».</span></li>
+  <li><span class="sn mint">3</span><span>Пересылка сообщений → «Никто» (чтобы при репосте не была видна ссылка на тебя).</span></li>
+</ul>
+<div class="tip sky"><strong>Проверяй раз в полгода</strong>Соцсети периодически меняют настройки приватности после обновлений, иногда сбрасывая твои выборы. Раз в несколько месяцев заходи и проверяй.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-lilac">Урок 30</div>
+<h2>Как выйти из аккаунта на чужом устройстве</h2>
+<p class="intro">Зашла в Instagram с чужого телефона и забыла выйти? Не страшно — выйти можно удалённо, прямо со своего телефона.</p>
+<div class="two-col">
+  <div class="col-block peach">
+    <h4>Instagram</h4>
+    <ol>
+      <li>Профиль → Меню → Настройки</li>
+      <li>Центр аккаунтов → Пароль и безопасность</li>
+      <li>«Места, где выполнен вход»</li>
+      <li>Выбери чужое устройство → «Выйти»</li>
+    </ol>
   </div>
-  <div class="content-note">
-    <h3>Уроки этого блока:</h3>
-    <ul>
-      <li><strong>Урок 26</strong> — Как создать почту Gmail и iCloud с нуля</li>
-      <li><strong>Урок 27</strong> — Как восстановить забытый пароль от аккаунта</li>
-      <li><strong>Урок 28</strong> — Как настроить уведомления — включить нужные, отключить лишние</li>
-      <li><strong>Урок 29</strong> — Как настроить приватность в Instagram, WhatsApp и Telegram</li>
-      <li><strong>Урок 30</strong> — Как выйти из аккаунта на чужом устройстве удалённо</li>
-    </ul>
+  <div class="col-block rose">
+    <h4>Google / Gmail</h4>
+    <ol>
+      <li>Открой myaccount.google.com</li>
+      <li>Безопасность → «Ваши устройства»</li>
+      <li>Найди чужое устройство</li>
+      <li>Нажми на него → «Выйти»</li>
+    </ol>
   </div>
-  <a class="back-btn" href="index.html">← Вернуться к списку блоков</a>
+</div>
+<div class="two-col">
+  <div class="col-block mint">
+    <h4>Telegram</h4>
+    <ol>
+      <li>Настройки → Устройства</li>
+      <li>Видишь список всех активных сессий</li>
+      <li>Нажми на нужное → «Завершить сессию»</li>
+    </ol>
+  </div>
+  <div class="col-block sky">
+    <h4>WhatsApp</h4>
+    <ol>
+      <li>Настройки → Связанные устройства</li>
+      <li>Видишь все активные сессии</li>
+      <li>Нажми на устройство → «Выйти»</li>
+    </ol>
+  </div>
+</div>
+<div class="tip lilac"><strong>После выхода — смени пароль</strong>Если заходила с чужого устройства и не уверена, безопасно ли оно — после удалённого выхода сразу смени пароль от этого аккаунта.</div>
+<table>
+  <thead><tr><th>Признак</th><th>Что это значит</th><th>Что делать</th></tr></thead>
+  <tbody>
+    <tr><td>Сообщения, которые ты не отправляла</td><td class="no">Кто-то имеет доступ к аккаунту</td><td>Завершить все сессии, сменить пароль, включить 2FA</td></tr>
+    <tr><td>Незнакомые устройства в списке сессий</td><td class="no">Чужой вход в аккаунт</td><td>Завершить чужую сессию немедленно</td></tr>
+    <tr><td>Уведомление «новый вход с устройства»</td><td class="mid">Кто-то или ты сама вошла с нового места</td><td>Проверь — если не ты, смени пароль</td></tr>
+  </tbody>
+</table>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-lav">Шпаргалка блока 6</div>
+<h2>Пять правил порядка в аккаунтах</h2>
+<table>
+  <thead><tr><th>Правило</th><th>Как запомнить</th></tr></thead>
+  <tbody>
+    <tr><td>Всегда указывай запасную почту и телефон при регистрации</td><td>«Запасной ключ — на случай если потеряю основной»</td></tr>
+    <tr><td>Выключай лишние уведомления</td><td>«Тишина — тоже настройка»</td></tr>
+    <tr><td>Закрой аккаунт в Instagram, если не хочешь чужих глаз</td><td>«Мой дом — мои правила»</td></tr>
+    <tr><td>Проверяй активные сессии раз в месяц</td><td>«Кто ещё сидит в моём аккаунте?»</td></tr>
+    <tr><td>Заходила с чужого устройства — сразу выйди удалённо</td><td>«Уходя — закрывай дверь»</td></tr>
+  </tbody>
+</table>
+
+<div class="final">
+  <h3>Блок 6 пройден!</h3>
+  <p>Теперь ты умеешь создавать аккаунты, восстанавливать пароли, настраивать приватность и контролировать, кто имеет доступ к твоим соцсетям.</p>
+</div>
 </div>
 </body>
 </html>

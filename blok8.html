@@ -6,38 +6,219 @@
 <title>Блок 8 — Видеозвонки</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:Georgia,serif;background:#FDF6EE;color:#3A2E28;line-height:1.7;}
+body{font-family:Georgia,serif;background:#F0FBF7;color:#0E2A1E;line-height:1.7;}
 .wrap{padding:2rem 1.5rem 4rem;max-width:720px;margin:0 auto;}
 .nav{margin-bottom:2rem;}
-.nav a{font-family:sans-serif;font-size:13px;color:#1F6B50;text-decoration:none;background:rgba(0,0,0,0.06);padding:6px 16px;border-radius:20px;}
-.hero{border-radius:20px;padding:2.5rem 2rem;text-align:center;margin-bottom:2.5rem;background:#C8EBE0;}
+.nav a{font-family:sans-serif;font-size:13px;color:#1F6B50;text-decoration:none;background:#C8EBE0;padding:6px 16px;border-radius:20px;}
+.hero{border-radius:20px;padding:2.5rem 2rem;text-align:center;margin-bottom:2.5rem;background:linear-gradient(135deg,#C8EBE0,#C8DFF5);}
 .hero-badge{display:inline-block;background:rgba(255,255,255,0.55);color:#1F6B50;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:4px 16px;border-radius:20px;margin-bottom:1rem;font-family:sans-serif;font-weight:500;}
-.hero h1{font-size:24px;font-weight:normal;color:#1A1A28;margin-bottom:.5rem;}
-.hero p{font-size:14px;font-family:sans-serif;max-width:460px;margin:0 auto;line-height:1.6;color:#3A3A48;}
-.content-note{background:rgba(255,255,255,0.7);border-radius:16px;padding:2rem;font-family:sans-serif;font-size:15px;line-height:1.8;color:#3A2E28;margin:2rem 0;}
-.content-note h3{font-size:17px;font-weight:700;margin-bottom:1rem;color:#1F6B50;}
-.content-note ul{padding-left:1.25rem;}
-.content-note li{margin-bottom:.6rem;}
-.back-btn{display:inline-block;margin-top:2rem;font-family:sans-serif;font-size:14px;color:#1F6B50;text-decoration:none;background:#C8EBE0;padding:10px 24px;border-radius:20px;font-weight:600;}
+.hero h1{font-size:25px;font-weight:normal;color:#0E2A1E;margin-bottom:.5rem;}
+.hero p{font-size:14px;color:#1A3A30;font-family:sans-serif;max-width:460px;margin:0 auto;line-height:1.6;}
+.lbl{display:inline-block;font-size:11px;font-family:sans-serif;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:3px 14px;border-radius:20px;margin-bottom:.6rem;}
+.lbl-mint{background:#C8EBE0;color:#1F6B50;}
+.lbl-sky{background:#C8DFF5;color:#1A4A7A;}
+.lbl-rose{background:#F9C6D0;color:#7A3045;}
+.lbl-lav{background:#D8D0F0;color:#4A3870;}
+.lbl-peach{background:#FDDEC8;color:#7A3D10;}
+h2{font-size:21px;font-weight:normal;margin-bottom:.3rem;}
+h3{font-size:16px;font-weight:normal;font-style:italic;margin:1.4rem 0 .5rem;}
+.intro{font-size:14px;color:#3A6A58;font-family:sans-serif;margin-bottom:1.25rem;line-height:1.65;}
+.divider{height:1px;background:#C8EBE0;margin:2.5rem 0;}
+.tip{border-left:3px solid;padding:1rem 1.15rem;margin:1.1rem 0;font-family:sans-serif;font-size:13.5px;line-height:1.6;}
+.tip strong{display:block;font-size:11px;font-weight:700;margin-bottom:4px;letter-spacing:.06em;text-transform:uppercase;}
+.tip.mint{background:#EDF7F3;border-color:#6DBFA0;color:#1F6B50;}
+.tip.sky{background:#EEF5FD;border-color:#7AAAD8;color:#1A4A7A;}
+.tip.rose{background:#FEF0F3;border-color:#C47A8A;color:#7A3045;}
+.tip.lav{background:#F0EDFC;border-color:#9B8EC4;color:#4A3870;}
+.tip.peach{background:#FEF5EE;border-color:#E8A47A;color:#7A3D10;}
+table{width:100%;border-collapse:collapse;font-family:sans-serif;font-size:13px;margin:1.1rem 0 1.6rem;}
+thead tr{background:#C8EBE0;}
+thead th{padding:9px 13px;text-align:left;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1F6B50;}
+tbody tr:nth-child(odd){background:#F4FBF8;}
+tbody tr:nth-child(even){background:#E4F5EE;}
+tbody td{padding:9px 13px;border-bottom:.5px solid #C8EBE0;vertical-align:top;}
+.ok{color:#1F6B50;font-weight:500;}
+.no{color:#7A3045;font-weight:500;}
+.mid{color:#7A3D10;font-weight:500;}
+.steps{list-style:none;margin:1rem 0 1.5rem;}
+.steps li{display:flex;gap:13px;align-items:flex-start;margin-bottom:11px;font-family:sans-serif;font-size:13.5px;line-height:1.55;}
+.sn{min-width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;margin-top:1px;}
+.sn.mint{background:#C8EBE0;color:#1F6B50;}
+.sn.sky{background:#C8DFF5;color:#1A4A7A;}
+.sn.rose{background:#F9C6D0;color:#7A3045;}
+.sn.lav{background:#D8D0F0;color:#4A3870;}
+.sn.peach{background:#FDDEC8;color:#7A3D10;}
+.sn.lilac{background:#EDD8F5;color:#5C2070;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:11px;margin:1.1rem 0 1.6rem;}
+.card{border-radius:14px;padding:1rem;font-family:sans-serif;}
+.card h4{font-size:13px;font-weight:700;margin-bottom:5px;}
+.card p{font-size:12.5px;line-height:1.5;}
+.card.mint{background:#EDF7F3;color:#1F6B50;}
+.card.sky{background:#EEF5FD;color:#1A4A7A;}
+.card.rose{background:#FEF0F3;color:#7A3045;}
+.card.lav{background:#F0EDFC;color:#4A3870;}
+.card.peach{background:#FEF5EE;color:#7A3D10;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0 1.6rem;}
+.col-block{border-radius:14px;padding:1.1rem;font-family:sans-serif;}
+.col-block h4{font-size:13px;font-weight:700;margin-bottom:8px;}
+.col-block ol,.col-block ul{font-size:12.5px;line-height:1.8;padding-left:1.1rem;}
+.col-block.mint{background:#EDF7F3;color:#1F6B50;}
+.col-block.sky{background:#EEF5FD;color:#1A4A7A;}
+.problem{border-radius:12px;padding:1rem 1.15rem;margin-bottom:10px;font-family:sans-serif;}
+.problem h4{font-size:13px;font-weight:700;margin-bottom:5px;}
+.problem p{font-size:13px;line-height:1.55;}
+.problem.rose{background:#FEF0F3;color:#7A3045;}
+.problem.sky{background:#EEF5FD;color:#1A4A7A;}
+.problem.lav{background:#F0EDFC;color:#4A3870;}
+.problem.peach{background:#FEF5EE;color:#7A3D10;}
+.problem.lilac{background:#F7EEFE;color:#5C2070;}
+.problem.mint{background:#EDF7F3;color:#1F6B50;}
+.checklist{list-style:none;margin:1rem 0 1.5rem;}
+.checklist li{display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;font-family:sans-serif;font-size:13.5px;line-height:1.5;}
+.check{min-width:20px;height:20px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;margin-top:1px;background:#C8EBE0;color:#1F6B50;font-weight:700;}
+.final-wrap{border-radius:20px;padding:2.5rem 2rem;text-align:center;margin-top:2.5rem;background:linear-gradient(135deg,#C8EBE0,#D8D0F0,#F9C6D0);}
+.final-wrap h2{font-size:22px;font-weight:normal;margin-bottom:.5rem;color:#1A1A2E;}
+.final-wrap p{font-size:14px;color:#3A2A40;font-family:sans-serif;line-height:1.65;max-width:500px;margin:0 auto 1.25rem;}
+.block-count{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.bc{background:rgba(255,255,255,0.6);border-radius:20px;padding:4px 14px;font-family:sans-serif;font-size:12px;font-weight:600;color:#3A2A40;}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="nav"><a href="index.html">← На главную</a></div>
-  <div class="hero">
-    <div class="hero-badge">Блок 8 · Видеозвонки</div>
-    <h1>Zoom, Meet, звук и камера —<br>без паники.</h1>
-    <p>Как войти на встречу, что делать если не слышно, и как поделиться экраном.</p>
+<div class="nav"><a href="index.html">← На главную</a></div>
+<div class="hero">
+  <div class="hero-badge">Блок 8 · Видеозвонки и онлайн-встречи</div>
+  <h1>Zoom, Meet, звук и камера —<br>без паники и неловких пауз.</h1>
+  <p>Как войти на встречу, что делать если не слышно, и как поделиться экраном — спокойно и по шагам.</p>
+</div>
+
+<div class="lbl lbl-mint">Урок 36</div>
+<h2>Как пользоваться Zoom и Google Meet с нуля</h2>
+<p class="intro">Zoom и Google Meet — два самых популярных сервиса для видеозвонков. Принцип одинаковый: получаешь ссылку — нажимаешь — входишь.</p>
+<h3>Zoom — первый раз пошагово</h3>
+<ul class="steps">
+  <li><span class="sn mint">1</span><span>Скачай приложение Zoom из App Store / Google Play (на телефоне) или с сайта zoom.us (на компьютере). Это бесплатно.</span></li>
+  <li><span class="sn sky">2</span><span>Когда придёт приглашение — там будет ссылка вида <em>zoom.us/j/12345678</em>. Нажми на неё.</span></li>
+  <li><span class="sn rose">3</span><span>Откроется Zoom и спросит: «Открыть в приложении Zoom?» — нажми «Открыть».</span></li>
+  <li><span class="sn lav">4</span><span>Появится экран с предпросмотром камеры. Можешь включить или выключить камеру и микрофон до входа. Затем нажми «Войти».</span></li>
+  <li><span class="sn peach">5</span><span>Если попросит пароль встречи — он обычно указан в том же письме или сообщении с приглашением.</span></li>
+  <li><span class="sn lilac">6</span><span>Ты внутри! Внизу экрана — кнопки управления: микрофон, камера, участники, чат и «Завершить».</span></li>
+</ul>
+<h3>Google Meet — ещё проще</h3>
+<ul class="steps">
+  <li><span class="sn mint">1</span><span>Приложение устанавливать необязательно — Meet работает прямо в браузере Chrome или Safari.</span></li>
+  <li><span class="sn sky">2</span><span>Нажми на ссылку вида <em>meet.google.com/abc-defg-hij</em> — откроется в браузере автоматически.</span></li>
+  <li><span class="sn rose">3</span><span>Браузер спросит разрешение на использование камеры и микрофона — нажми «Разрешить».</span></li>
+  <li><span class="sn lav">4</span><span>Введи своё имя → нажми «Запросить разрешение на вход» или «Войти».</span></li>
+  <li><span class="sn peach">5</span><span>Если встреча ещё не началась — подождёшь в «предбаннике». Организатор впустит тебя, когда будет готов.</span></li>
+</ul>
+<div class="tip mint"><strong>Совет инструктора: зайди за 5 минут до начала</strong>Заходи на встречу чуть заранее — тогда успеешь проверить звук и камеру без спешки. Лучше подождать в «предбаннике», чем врываться с опозданием и техническими проблемами.</div>
+<table>
+  <thead><tr><th>Параметр</th><th>Zoom</th><th>Google Meet</th></tr></thead>
+  <tbody>
+    <tr><td>Нужна регистрация для входа</td><td class="ok">Нет (только для организатора)</td><td class="ok">Нет (нужен Google-аккаунт для организатора)</td></tr>
+    <tr><td>Нужно приложение</td><td class="mid">Желательно</td><td class="ok">Нет, работает в браузере</td></tr>
+    <tr><td>Бесплатный лимит времени</td><td class="mid">40 минут (встречи на 3+ человек)</td><td class="ok">60 минут</td></tr>
+    <tr><td>Демонстрация экрана</td><td class="ok">Есть</td><td class="ok">Есть</td></tr>
+    <tr><td>Удобство для новичка</td><td class="mid">Чуть сложнее</td><td class="ok">Проще, всё в браузере</td></tr>
+  </tbody>
+</table>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-sky">Урок 37</div>
+<h2>Не слышно звука или не работает камера</h2>
+<p class="intro">Самые частые проблемы на видеозвонках — и все они решаются за 1–2 минуты. Запомни этот алгоритм и больше не паникуй.</p>
+<h3>Меня не слышат</h3>
+<div class="problem rose"><h4>Микрофон выключен в приложении</h4><p>Посмотри на иконку микрофона внизу экрана — если перечёркнута или красная, нажми на неё, чтобы включить.</p></div>
+<div class="problem sky"><h4>Приложение не получило доступ к микрофону</h4><p>iPhone: Настройки → Zoom (или Meet) → Микрофон → включи. Android: Настройки → Приложения → Zoom → Разрешения → Микрофон → Разрешить.</p></div>
+<div class="problem lav"><h4>На компьютере выбран не тот микрофон</h4><p>В Zoom: нажми стрелочку рядом с иконкой микрофона → выбери нужный микрофон из списка.</p></div>
+<h3>Я не слышу других</h3>
+<div class="problem peach"><h4>Телефон на беззвучном режиме</h4><p>Проверь боковой переключатель на iPhone или увеличь громкость кнопкой на телефоне.</p></div>
+<div class="problem lilac"><h4>Динамик не выбран в Zoom</h4><p>В Zoom нажми стрелочку рядом с микрофоном → «Выбрать динамик» → выбери нужный.</p></div>
+<h3>Камера не работает</h3>
+<div class="problem mint"><h4>Камера выключена в приложении</h4><p>Нажми на иконку камеры внизу экрана — если перечёркнута, нажми для включения.</p></div>
+<div class="problem rose"><h4>Нет разрешения на камеру</h4><p>iPhone: Настройки → Zoom → Камера → включи. Android: Настройки → Приложения → Zoom → Разрешения → Камера → Разрешить.</p></div>
+<div class="problem sky"><h4>Камера занята другим приложением</h4><p>Закрой все другие приложения, которые могут использовать камеру (FaceTime, WhatsApp, Instagram) и перезайди в Zoom.</p></div>
+<div class="tip sky"><strong>Универсальное решение для любой проблемы</strong>Выйди из встречи → закрой приложение полностью → перезагрузи телефон или компьютер → зайди снова. В 8 случаях из 10 это помогает.</div>
+<h3>Чек-лист перед важным звонком</h3>
+<ul class="checklist">
+  <li><span class="check">✓</span><span>Телефон или компьютер заряжен хотя бы на 50% или подключён к розетке</span></li>
+  <li><span class="check">✓</span><span>Есть стабильный Wi-Fi (не мобильный интернет — он может подвести)</span></li>
+  <li><span class="check">✓</span><span>Камера работает — проверь в Zoom через «Тест видео» или через приложение «Камера»</span></li>
+  <li><span class="check">✓</span><span>Звук работает — скажи что-нибудь вслух и посмотри, реагирует ли полоска микрофона</span></li>
+  <li><span class="check">✓</span><span>Фон позади тебя — приличный (не куча вещей или незастеленная кровать)</span></li>
+  <li><span class="check">✓</span><span>Свет падает на тебя спереди, а не сзади (иначе будет силуэт)</span></li>
+  <li><span class="check">✓</span><span>Телефон на беззвучном режиме выключен (чтобы не было эха от уведомлений)</span></li>
+</ul>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-rose">Урок 38</div>
+<h2>Как поделиться экраном</h2>
+<p class="intro">Поделиться экраном — значит показать другим участникам то, что видишь ты: документ, сайт, фото, презентацию.</p>
+<h3>Демонстрация экрана в Zoom</h3>
+<ul class="steps">
+  <li><span class="sn mint">1</span><span><strong>На телефоне:</strong> во время звонка нажми кнопку «Поделиться» (Share) внизу — иконка со стрелкой вверх.</span></li>
+  <li><span class="sn sky">2</span><span>Выбери что показывать: «Экран» (всё), «Фото», «Документ» или конкретное приложение.</span></li>
+  <li><span class="sn rose">3</span><span>Если выбрала «Экран» — появится предупреждение. Нажми «Начать трансляцию». Оранжевая полоска вверху напомнит, что демонстрация активна.</span></li>
+  <li><span class="sn lav">4</span><span>Чтобы остановить: нажми на оранжевую полоску → «Остановить трансляцию».</span></li>
+</ul>
+<ul class="steps">
+  <li><span class="sn mint">1</span><span><strong>На компьютере:</strong> внизу экрана Zoom нажми зелёную кнопку «Демонстрация экрана» (Share Screen).</span></li>
+  <li><span class="sn sky">2</span><span>Выбери: весь экран, конкретное окно (только Word или браузер) или доску для рисования.</span></li>
+  <li><span class="sn rose">3</span><span>Нажми «Поделиться». Рамка вокруг экрана станет зелёной — демонстрация идёт.</span></li>
+  <li><span class="sn lav">4</span><span>Совет: выбирай конкретное окно, а не «весь экран» — тогда личные уведомления останутся невидимы для участников.</span></li>
+  <li><span class="sn peach">5</span><span>Чтобы остановить: нажми красную кнопку «Остановить демонстрацию» вверху экрана.</span></li>
+</ul>
+<h3>Демонстрация экрана в Google Meet</h3>
+<ul class="steps">
+  <li><span class="sn mint">1</span><span>Внизу экрана нажми иконку со стрелкой вверх («Показать экран»).</span></li>
+  <li><span class="sn sky">2</span><span>Выбери: «Весь экран», «Окно» или «Вкладка Chrome» (только одна страница браузера).</span></li>
+  <li><span class="sn rose">3</span><span>Нажми «Поделиться». Все участники теперь видят твой экран.</span></li>
+  <li><span class="sn lav">4</span><span>Чтобы остановить: нажми «Остановить показ» в нижней панели Meet.</span></li>
+</ul>
+<div class="tip rose"><strong>Перед демонстрацией — закрой лишнее</strong>Закрой вкладки браузера, личные чаты и всё, что не хочешь показывать. Даже если выбрала «одно окно» — лучше убрать лишнее заранее.</div>
+<table>
+  <thead><tr><th>Ситуация</th><th>Что выбрать</th><th>Почему</th></tr></thead>
+  <tbody>
+    <tr><td>Показать презентацию</td><td class="ok">Окно PowerPoint / Keynote</td><td>Только презентация, ничего лишнего</td></tr>
+    <tr><td>Показать сайт</td><td class="ok">Вкладка Chrome (Meet) или окно браузера</td><td>Остальные вкладки скрыты</td></tr>
+    <tr><td>Показать документ Word</td><td class="ok">Окно Word</td><td>Личные файлы на рабочем столе не видны</td></tr>
+    <tr><td>Помочь разобраться с компьютером</td><td class="mid">Весь экран</td><td>Помощник видит всё и может направлять</td></tr>
+  </tbody>
+</table>
+<div class="tip lav"><strong>Лайфхак: виртуальный фон в Zoom</strong>Если дома беспорядок — не переживай. В Zoom → нажми стрелку рядом с камерой → «Виртуальные фоны» → выбери любой размытый или картиночный фон. Никто не увидит, что за тобой на самом деле.</div>
+
+<div class="divider"></div>
+
+<div class="lbl lbl-lav">Шпаргалка блока 8</div>
+<h2>Пять правил комфортного видеозвонка</h2>
+<table>
+  <thead><tr><th>Правило</th><th>Как запомнить</th></tr></thead>
+  <tbody>
+    <tr><td>Заходи за 5 минут до начала</td><td>«Лучше подождать, чем врываться»</td></tr>
+    <tr><td>Свет — спереди, а не сзади</td><td>«Не хочу быть силуэтом»</td></tr>
+    <tr><td>Микрофон на паузе, когда не говоришь</td><td>«Мой фон слышен всем — лучше молчу»</td></tr>
+    <tr><td>Перед демонстрацией — закрой лишние вкладки</td><td>«Личное остаётся личным»</td></tr>
+    <tr><td>Не слышно звука — сначала проверь беззвучный режим</td><td>«Самая частая причина — самая простая»</td></tr>
+  </tbody>
+</table>
+
+<div class="final-wrap">
+  <h2>Все 8 блоков пройдены! 🎉</h2>
+  <p>Поздравляю — теперь ты знаешь всё самое важное о смартфоне, компьютере, интернете, безопасности и видеозвонках. Техника больше не пугает — она просто инструмент. И ты умеешь им пользоваться.</p>
+  <div class="block-count">
+    <span class="bc">Блок 1 — Основы смартфона</span>
+    <span class="bc">Блок 2 — Память и облако</span>
+    <span class="bc">Блок 3 — Приложения</span>
+    <span class="bc">Блок 4 — Wi-Fi и интернет</span>
+    <span class="bc">Блок 5 — Пароли и безопасность</span>
+    <span class="bc">Блок 6 — Аккаунты и соцсети</span>
+    <span class="bc">Блок 7 — Компьютер</span>
+    <span class="bc">Блок 8 — Видеозвонки</span>
   </div>
-  <div class="content-note">
-    <h3>Уроки этого блока:</h3>
-    <ul>
-      <li><strong>Урок 36</strong> — Как пользоваться Zoom и Google Meet с нуля</li>
-      <li><strong>Урок 37</strong> — Что делать, если не слышно звука или не работает камера</li>
-      <li><strong>Урок 38</strong> — Как поделиться экраном во время видеозвонка</li>
-    </ul>
-  </div>
-  <a class="back-btn" href="index.html">← Вернуться к списку блоков</a>
+</div>
 </div>
 </body>
 </html>
